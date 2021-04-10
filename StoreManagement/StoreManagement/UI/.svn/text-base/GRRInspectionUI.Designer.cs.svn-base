@@ -1,0 +1,662 @@
+﻿namespace StoreManagement.UI
+{
+    partial class GRRInspectionUI
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pOrdDataGridView = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.acceptanceComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.commentsTextBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.challanTextBox = new System.Windows.Forms.TextBox();
+            this.challanDate = new System.Windows.Forms.DateTimePicker();
+            this.paymentValueLabel = new System.Windows.Forms.Label();
+            this.purOrdDateLabel = new System.Windows.Forms.Label();
+            this.cepNoLabel = new System.Windows.Forms.Label();
+            this.purchaseOrderLabel = new System.Windows.Forms.Label();
+            this.supplierLabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.remarksComboBox = new System.Windows.Forms.ComboBox();
+            this.ColumnSlno = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.slNOColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poItemColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poQtyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.challanItemColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.challanQtyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phyItemColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phyQtyColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remarksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderIDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infoPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pOrdDataGridView)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // infoPanel
+            // 
+            this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.infoPanel.Controls.Add(this.panel3);
+            this.infoPanel.Controls.Add(this.groupBox5);
+            this.infoPanel.Controls.Add(this.panel2);
+            this.infoPanel.Controls.Add(this.panel1);
+            this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPanel.Location = new System.Drawing.Point(0, 33);
+            this.infoPanel.Margin = new System.Windows.Forms.Padding(15, 3, 15, 3);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.infoPanel.Size = new System.Drawing.Size(667, 571);
+            this.infoPanel.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.remarksComboBox);
+            this.panel3.Controls.Add(this.pOrdDataGridView);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(5, 150);
+            this.panel3.Name = "panel3";
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 5, 0, 2);
+            this.panel3.Size = new System.Drawing.Size(657, 286);
+            this.panel3.TabIndex = 251;
+            // 
+            // pOrdDataGridView
+            // 
+            this.pOrdDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(188)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(188)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.pOrdDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.pOrdDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.pOrdDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(192)))), ((int)(((byte)(196)))));
+            this.pOrdDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(133)))), ((int)(((byte)(141)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pOrdDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.pOrdDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.pOrdDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnSlno,
+            this.slNOColumn,
+            this.poItemColumn,
+            this.poQtyColumn,
+            this.challanItemColumn,
+            this.challanQtyColumn,
+            this.phyItemColumn,
+            this.phyQtyColumn,
+            this.remarksColumn,
+            this.rateColumn,
+            this.orderIDColumn,
+            this.pCodeColumn,
+            this.RemIdColumn});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pOrdDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.pOrdDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pOrdDataGridView.EnableHeadersVisualStyles = false;
+            this.pOrdDataGridView.Location = new System.Drawing.Point(0, 5);
+            this.pOrdDataGridView.Name = "pOrdDataGridView";
+            this.pOrdDataGridView.RowHeadersVisible = false;
+            this.pOrdDataGridView.Size = new System.Drawing.Size(657, 279);
+            this.pOrdDataGridView.TabIndex = 233;
+            this.pOrdDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pOrdDataGridView_CellClick);
+            this.pOrdDataGridView.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.pOrdDataGridView_CellEnter);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.groupBox5.Controls.Add(this.acceptanceComboBox);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.commentsTextBox);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox5.Location = new System.Drawing.Point(5, 436);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(657, 102);
+            this.groupBox5.TabIndex = 250;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Inspection Summery";
+            // 
+            // acceptanceComboBox
+            // 
+            this.acceptanceComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.acceptanceComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.acceptanceComboBox.FormattingEnabled = true;
+            this.acceptanceComboBox.Location = new System.Drawing.Point(86, 24);
+            this.acceptanceComboBox.Name = "acceptanceComboBox";
+            this.acceptanceComboBox.Size = new System.Drawing.Size(158, 21);
+            this.acceptanceComboBox.TabIndex = 249;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label2.Location = new System.Drawing.Point(7, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 25);
+            this.label2.TabIndex = 248;
+            this.label2.Text = "Acceptance";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label15.Location = new System.Drawing.Point(267, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 25);
+            this.label15.TabIndex = 247;
+            this.label15.Text = "Comments";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // commentsTextBox
+            // 
+            this.commentsTextBox.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.commentsTextBox.Location = new System.Drawing.Point(330, 20);
+            this.commentsTextBox.Multiline = true;
+            this.commentsTextBox.Name = "commentsTextBox";
+            this.commentsTextBox.Size = new System.Drawing.Size(317, 68);
+            this.commentsTextBox.TabIndex = 246;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.panel2.Controls.Add(this.clearButton);
+            this.panel2.Controls.Add(this.closeButton);
+            this.panel2.Controls.Add(this.saveButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(5, 538);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(657, 33);
+            this.panel2.TabIndex = 247;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(520, 6);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(60, 23);
+            this.clearButton.TabIndex = 7;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(586, 6);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(60, 23);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(64)))), ((int)(((byte)(91)))));
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.Location = new System.Drawing.Point(452, 6);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(62, 23);
+            this.saveButton.TabIndex = 6;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(5, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 7);
+            this.panel1.Size = new System.Drawing.Size(657, 150);
+            this.panel1.TabIndex = 246;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.challanTextBox);
+            this.groupBox2.Controls.Add(this.challanDate);
+            this.groupBox2.Controls.Add(this.paymentValueLabel);
+            this.groupBox2.Controls.Add(this.purOrdDateLabel);
+            this.groupBox2.Controls.Add(this.cepNoLabel);
+            this.groupBox2.Controls.Add(this.purchaseOrderLabel);
+            this.groupBox2.Controls.Add(this.supplierLabel);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(657, 143);
+            this.groupBox2.TabIndex = 244;
+            this.groupBox2.TabStop = false;
+            // 
+            // challanTextBox
+            // 
+            this.challanTextBox.Location = new System.Drawing.Point(113, 81);
+            this.challanTextBox.Name = "challanTextBox";
+            this.challanTextBox.Size = new System.Drawing.Size(145, 20);
+            this.challanTextBox.TabIndex = 266;
+            // 
+            // challanDate
+            // 
+            this.challanDate.CustomFormat = "dd/MM/yyyy";
+            this.challanDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.challanDate.Location = new System.Drawing.Point(481, 81);
+            this.challanDate.Name = "challanDate";
+            this.challanDate.Size = new System.Drawing.Size(97, 20);
+            this.challanDate.TabIndex = 265;
+            // 
+            // paymentValueLabel
+            // 
+            this.paymentValueLabel.BackColor = System.Drawing.Color.White;
+            this.paymentValueLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paymentValueLabel.ForeColor = System.Drawing.Color.Black;
+            this.paymentValueLabel.Location = new System.Drawing.Point(481, 107);
+            this.paymentValueLabel.Name = "paymentValueLabel";
+            this.paymentValueLabel.Size = new System.Drawing.Size(97, 20);
+            this.paymentValueLabel.TabIndex = 264;
+            this.paymentValueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // purOrdDateLabel
+            // 
+            this.purOrdDateLabel.BackColor = System.Drawing.Color.White;
+            this.purOrdDateLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purOrdDateLabel.ForeColor = System.Drawing.Color.Black;
+            this.purOrdDateLabel.Location = new System.Drawing.Point(481, 55);
+            this.purOrdDateLabel.Name = "purOrdDateLabel";
+            this.purOrdDateLabel.Size = new System.Drawing.Size(97, 20);
+            this.purOrdDateLabel.TabIndex = 263;
+            this.purOrdDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cepNoLabel
+            // 
+            this.cepNoLabel.BackColor = System.Drawing.Color.White;
+            this.cepNoLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cepNoLabel.ForeColor = System.Drawing.Color.Black;
+            this.cepNoLabel.Location = new System.Drawing.Point(113, 107);
+            this.cepNoLabel.Name = "cepNoLabel";
+            this.cepNoLabel.Size = new System.Drawing.Size(97, 20);
+            this.cepNoLabel.TabIndex = 261;
+            this.cepNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // purchaseOrderLabel
+            // 
+            this.purchaseOrderLabel.BackColor = System.Drawing.Color.White;
+            this.purchaseOrderLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchaseOrderLabel.ForeColor = System.Drawing.Color.Black;
+            this.purchaseOrderLabel.Location = new System.Drawing.Point(113, 55);
+            this.purchaseOrderLabel.Name = "purchaseOrderLabel";
+            this.purchaseOrderLabel.Size = new System.Drawing.Size(145, 20);
+            this.purchaseOrderLabel.TabIndex = 260;
+            this.purchaseOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // supplierLabel
+            // 
+            this.supplierLabel.BackColor = System.Drawing.Color.White;
+            this.supplierLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierLabel.ForeColor = System.Drawing.Color.Black;
+            this.supplierLabel.Location = new System.Drawing.Point(113, 28);
+            this.supplierLabel.Name = "supplierLabel";
+            this.supplierLabel.Size = new System.Drawing.Size(465, 20);
+            this.supplierLabel.TabIndex = 259;
+            this.supplierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label3.Location = new System.Drawing.Point(23, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 25);
+            this.label3.TabIndex = 256;
+            this.label3.Text = "Supplier";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label7.Location = new System.Drawing.Point(392, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 28);
+            this.label7.TabIndex = 254;
+            this.label7.Text = "Date";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label10.Location = new System.Drawing.Point(23, 76);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 28);
+            this.label10.TabIndex = 252;
+            this.label10.Text = "Invoice/ Challan No.";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label11.Location = new System.Drawing.Point(392, 50);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(84, 25);
+            this.label11.TabIndex = 249;
+            this.label11.Text = "Date";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label8.Location = new System.Drawing.Point(23, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 25);
+            this.label8.TabIndex = 248;
+            this.label8.Text = "P.O. NO.";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label12.Location = new System.Drawing.Point(392, 105);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 25);
+            this.label12.TabIndex = 226;
+            this.label12.Text = "Payment Value";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(203)))), ((int)(((byte)(238)))));
+            this.label13.Location = new System.Drawing.Point(23, 105);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(84, 25);
+            this.label13.TabIndex = 224;
+            this.label13.Text = "Order Value";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(667, 33);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "  Technical Inspection (FSD/MIS)";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // remarksComboBox
+            // 
+            this.remarksComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.remarksComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.remarksComboBox.FormattingEnabled = true;
+            this.remarksComboBox.Location = new System.Drawing.Point(566, 36);
+            this.remarksComboBox.Name = "remarksComboBox";
+            this.remarksComboBox.Size = new System.Drawing.Size(88, 21);
+            this.remarksComboBox.TabIndex = 267;
+            this.remarksComboBox.Visible = false;
+            this.remarksComboBox.SelectedIndexChanged += new System.EventHandler(this.remarksComboBox_SelectedIndexChanged);
+            // 
+            // ColumnSlno
+            // 
+            this.ColumnSlno.HeaderText = "";
+            this.ColumnSlno.Name = "ColumnSlno";
+            this.ColumnSlno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnSlno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnSlno.Visible = false;
+            this.ColumnSlno.Width = 25;
+            // 
+            // slNOColumn
+            // 
+            this.slNOColumn.HeaderText = "Sl. No.";
+            this.slNOColumn.Name = "slNOColumn";
+            this.slNOColumn.ReadOnly = true;
+            this.slNOColumn.Width = 30;
+            // 
+            // poItemColumn
+            // 
+            this.poItemColumn.HeaderText = "P.O Item";
+            this.poItemColumn.Name = "poItemColumn";
+            this.poItemColumn.ReadOnly = true;
+            this.poItemColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.poItemColumn.Width = 125;
+            // 
+            // poQtyColumn
+            // 
+            this.poQtyColumn.HeaderText = "P.O. Qty";
+            this.poQtyColumn.Name = "poQtyColumn";
+            this.poQtyColumn.ReadOnly = true;
+            this.poQtyColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.poQtyColumn.Width = 55;
+            // 
+            // challanItemColumn
+            // 
+            this.challanItemColumn.HeaderText = "Challan Item";
+            this.challanItemColumn.Name = "challanItemColumn";
+            this.challanItemColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.challanItemColumn.Width = 125;
+            // 
+            // challanQtyColumn
+            // 
+            this.challanQtyColumn.HeaderText = "Challan Qty";
+            this.challanQtyColumn.Name = "challanQtyColumn";
+            this.challanQtyColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.challanQtyColumn.Width = 55;
+            // 
+            // phyItemColumn
+            // 
+            this.phyItemColumn.HeaderText = "Physicallay found";
+            this.phyItemColumn.Name = "phyItemColumn";
+            this.phyItemColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.phyItemColumn.Width = 125;
+            // 
+            // phyQtyColumn
+            // 
+            this.phyQtyColumn.HeaderText = "Phys. Qty";
+            this.phyQtyColumn.Name = "phyQtyColumn";
+            this.phyQtyColumn.Width = 50;
+            // 
+            // remarksColumn
+            // 
+            this.remarksColumn.HeaderText = "Remarks";
+            this.remarksColumn.Name = "remarksColumn";
+            this.remarksColumn.ReadOnly = true;
+            this.remarksColumn.Width = 90;
+            // 
+            // rateColumn
+            // 
+            this.rateColumn.HeaderText = "";
+            this.rateColumn.Name = "rateColumn";
+            this.rateColumn.ReadOnly = true;
+            this.rateColumn.Visible = false;
+            // 
+            // orderIDColumn
+            // 
+            this.orderIDColumn.HeaderText = "";
+            this.orderIDColumn.Name = "orderIDColumn";
+            this.orderIDColumn.ReadOnly = true;
+            this.orderIDColumn.Visible = false;
+            // 
+            // pCodeColumn
+            // 
+            this.pCodeColumn.HeaderText = "";
+            this.pCodeColumn.Name = "pCodeColumn";
+            this.pCodeColumn.ReadOnly = true;
+            this.pCodeColumn.Visible = false;
+            // 
+            // RemIdColumn
+            // 
+            this.RemIdColumn.HeaderText = "";
+            this.RemIdColumn.Name = "RemIdColumn";
+            this.RemIdColumn.ReadOnly = true;
+            this.RemIdColumn.Visible = false;
+            // 
+            // GRRInspectionUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(667, 604);
+            this.Controls.Add(this.infoPanel);
+            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "GRRInspectionUI";
+            this.Opacity = 0.95D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "GRR Inspection";
+            this.Load += new System.EventHandler(this.GRRInspectionUI_Load);
+            this.infoPanel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pOrdDataGridView)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox commentsTextBox;
+        private System.Windows.Forms.DataGridView pOrdDataGridView;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox acceptanceComboBox;
+        private System.Windows.Forms.Label purOrdDateLabel;
+        private System.Windows.Forms.Label cepNoLabel;
+        private System.Windows.Forms.Label purchaseOrderLabel;
+        private System.Windows.Forms.Label supplierLabel;
+        private System.Windows.Forms.Label paymentValueLabel;
+        private System.Windows.Forms.TextBox challanTextBox;
+        private System.Windows.Forms.DateTimePicker challanDate;
+        private System.Windows.Forms.ComboBox remarksComboBox;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSlno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn slNOColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poItemColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poQtyColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn challanItemColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn challanQtyColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phyItemColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phyQtyColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn remarksColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rateColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderIDColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pCodeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RemIdColumn;
+    }
+}

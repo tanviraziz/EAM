@@ -1,0 +1,402 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using StoreManagement.BLL;
+using StoreManagement.DAL.DAO;
+using StoreManagement.UTILITY;
+using StoreManagement.Properties;
+
+
+namespace StoreManagement.UI
+{
+    public partial class SRREntryUI : Form
+    {
+        #region Veriables
+            #region form animation 
+            //Constants---------------------------------------------------------------
+            const int AW_CENTER = 0X10;
+            const int AW_HIDE = 0X10000;
+            const int AW_ACTIVATE = 0X20000;
+            const int AW_SLIDE = 0X40000;
+            const int AW_HOR_POSITIVE = 0X1;
+            const int AW_HOR_NEGATIVE = 0X2;
+            const int AW_BLEND = 0X80000;
+            const int AW_VER_POSITIVE = 0X4;
+            const int AW_VER_NEGATIVE = 0X8;        
+
+            [DllImport("user32")]
+            private static extern bool AnimateWindow(IntPtr hwnd, int time, int flags);
+            //s------------------------------------------------------------------------
+            #endregion
+
+            private DynamicControlFill fillControl = null;
+            private MasterSetupManager settingsManager = null;
+            private SRRManager requisitionManager = null;
+            private bool IsEdit = false;
+            private SRR srr = null;
+        #endregion
+        public SRREntryUI()
+        {
+            InitializeComponent();
+            SetObjects();
+        }
+
+        private void SetObjects()
+        {
+            fillControl = new DynamicControlFill();
+            settingsManager = new MasterSetupManager();
+            requisitionManager = new SRRManager();
+        }
+
+        
+        private void closeLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void SRREntryUI_Load(object sender, EventArgs e)
+        {
+            AnimateWindow(this.Handle, 400, AW_SLIDE | AW_VER_NEGATIVE);
+            fillControl.fillCombo(departmentComboBox, settingsManager.GetDepartmentList("3", null), "Department", "Code");
+            departmentComboBox.SelectedIndex = -1;
+
+            fillControl.fillCombo(stationaryComboBox, settingsManager.GetStationaryCategoryList("1", null), "Category", "Code");
+            stationaryComboBox.SelectedIndex = -1;
+            //set the stationary combo event
+            this.stationaryComboBox.SelectedIndexChanged += new System.EventHandler(this.stationaryComboBox_SelectedIndexChanged);
+        }
+
+        private void stationaryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowItems();
+        }
+
+        private void ShowItems()
+        {
+            try
+            {
+                if (stationaryComboBox.SelectedIndex > -1)
+                {
+                    //unset the item combo event
+                    this.itemComboBox.SelectedIndexChanged -= new System.EventHandler(this.itemComboBox_SelectedIndexChanged);
+
+                    fillControl.fillCombo(itemComboBox, settingsManager.GetItemCategoryList("2", stationaryComboBox.SelectedValue.ToString().Trim()), "Category", "Code");
+                    itemComboBox.SelectedIndex = -1;
+
+                    
+                    //set the item combo event
+                    this.itemComboBox.SelectedIndexChanged += new System.EventHandler(this.itemComboBox_SelectedIndexChanged);
+                }
+            }
+            catch
+            {
+                itemComboBox.DataSource = null;
+                itemComboBox.Items.Clear();
+            }
+        }
+
+        private void itemComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowSubCategory();
+            itemListView.Items.Clear();
+            //fillControl.fillListView(itemListView, settingsManager.GetItemList("3", itemComboBox.SelectedValue.ToString()), "Item,,", "317,,");
+        }
+
+        private void ShowSubCategory()
+        {
+            try
+            {
+                if (itemComboBox.SelectedIndex > -1)
+                {
+                    //unset the item category combo event
+                    this.itemCategoryComboBox.SelectedIndexChanged -= new System.EventHandler(this.itemCategoryComboBox_SelectedIndexChanged);
+
+                    fillControl.fillCombo(itemCategoryComboBox, settingsManager.GetItemSubCategoryList("3", itemComboBox.SelectedValue.ToString().Trim()), "SubCategory", "Code");
+                    itemCategoryComboBox.SelectedIndex = -1;
+
+                    //set the item category combo event
+                    this.itemCategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.itemCategoryComboBox_SelectedIndexChanged);
+                }
+            }
+            catch
+            {
+                itemCategoryComboBox.DataSource = null;
+                itemCategoryComboBox.Items.Clear();
+            }
+        }
+
+        private void itemCategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillControl.fillListView(itemListView, settingsManager.GetItemList("3", itemCategoryComboBox.SelectedValue.ToString()), "Item,,,,", "317,,,,");
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (IsValid())
+            {
+                if(requisitionManager.SRRManagement(srr))
+                {
+                    ClearAllFields();
+                }
+            }
+        }
+
+        private bool IsValid()
+        {
+            return true;
+        }
+
+        private void SetValues()
+        {
+            if (srr == null)
+            {
+                srr = new SRR();
+            }
+            srr.SRRDate = requisitionDate.Value;
+            srr.DeptUID = Convert.ToInt32(departmentComboBox.SelectedValue.ToString().Trim());
+            srr.Purpose = purposeTextBox.Text.Trim();
+
+            foreach (DataGridViewRow gridItem in storeReqDataGridView.Rows)
+            {
+                if (gridItem.Cells[1].Value != null)
+                {
+                    Product srrProduct = new Product();
+
+                    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)gridItem.Cells[0];
+                    if (chk.Value != null && (bool)chk.Value)
+                    {
+                        if (IsEdit && (gridItem.Cells[8].Value != null && !string.IsNullOrEmpty(gridItem.Cells[8].Value.ToString())))
+                        {
+                            srrProduct.ReqQty = Convert.ToDecimal(gridItem.Cells[5].Value.ToString().Trim());
+                            srrProduct.IssueQty = Convert.ToDecimal(gridItem.Cells[6].Value.ToString().Trim());
+                            srrProduct.UnitPrice = Convert.ToDecimal(gridItem.Cells[8].Value.ToString().Trim());
+                            srrProduct.PID = gridItem.Cells[11].Value.ToString().Trim();
+                            srrProduct.StationaryID = Convert.ToInt16(gridItem.Cells[10].Value.ToString().Trim());
+                            srrProduct.Condition = "2";
+                        }
+                        else
+                        {
+                            srrProduct.ReqQty = Convert.ToDecimal(gridItem.Cells[3].Value.ToString().Trim());
+                            srrProduct.IssueQty = Convert.ToDecimal(gridItem.Cells[5].Value.ToString().Trim());
+                            srrProduct.UnitPrice = Convert.ToDecimal(gridItem.Cells[8].Value.ToString().Trim());
+                            srrProduct.PCode = gridItem.Cells[9].Value.ToString().Trim();
+                            srrProduct.StationaryID = Convert.ToInt16(gridItem.Cells[10].Value.ToString().Trim());
+                        }
+                        srr.Products.Add(srrProduct);
+                    }
+                }
+            }
+        }
+
+        private bool haveNoItem()
+        {
+            try
+            {
+                if (storeReqDataGridView.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow dgRow in storeReqDataGridView.Rows)
+                    {
+                        if ((bool)dgRow.Cells[0].Value == true)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                return true;
+            }
+            return true;
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            if (HaveNoSelection())
+            {
+                MessageBox.Show("Select an item.");
+            }
+            else
+            {
+                AddItemInRequisition();
+            }
+        }
+
+        //check any item selected or no
+        private bool HaveNoSelection()
+        {
+            foreach (ListViewItem item in itemListView.Items)
+            {
+                if (item.Checked)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void AddItemInRequisition()
+        {
+            foreach (ListViewItem item in itemListView.Items) 
+            {
+                if (item.Checked) 
+                {
+                    if (!itemExist(item.SubItems[3].Text.Trim()))
+                    {
+                        int newRow = storeReqDataGridView.Rows.Add();
+                        storeReqDataGridView.Rows[newRow].Cells[1].Value = newRow + 1;
+                        storeReqDataGridView.Rows[newRow].Cells[2].Value = item.Text.Trim();
+                        storeReqDataGridView.Rows[newRow].Cells[3].Value = item.SubItems[1].Text.Trim();
+                        storeReqDataGridView.Rows[newRow].Cells[4].Value = item.SubItems[2].Text.Trim();
+                        storeReqDataGridView.Rows[newRow].Cells[8].Value = item.SubItems[3].Text.Trim();
+                        storeReqDataGridView.Rows[newRow].Cells[9].Value = item.SubItems[4].Text.Trim();
+                        storeReqDataGridView.Rows[newRow].Cells[10].Value = stationaryComboBox.SelectedValue.ToString().Trim();
+                    }
+                }
+            }
+            
+        }
+
+        //wheather the item already exists or not
+        private bool itemExist(string code)
+        {
+            if (storeReqDataGridView.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in storeReqDataGridView.Rows)
+                {
+                    if (row.Cells[1].Value != null)
+                    {
+                        if (row.Cells[9].Value.ToString().Trim().ToUpper() == code.ToUpper())
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        private void storeReqDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+            {
+                Image img = Resources.close;
+                e.Value = img;
+            }
+        }
+
+        private void storeReqDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            TextBox txtEdit = (TextBox)e.Control;
+            if (storeReqDataGridView.CurrentRow != null)
+            {
+                if (storeReqDataGridView.CurrentCell.ColumnIndex == 5 || storeReqDataGridView.CurrentCell.ColumnIndex == 6 )
+                {
+                    txtEdit.KeyPress += IsNumber_Keypress;
+                }
+                else
+                {
+                    txtEdit.KeyPress += IsText_Keypress;
+                }
+            }
+        }
+
+        private void IsNumber_Keypress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (checkRequiredField(Convert.ToInt32(storeReqDataGridView.CurrentRow.Index)))
+            {
+                switch (e.KeyChar)
+                {
+                    //case '.':
+                    //    break;
+                    case '\b':
+                        break;
+                    default:
+                        if (!Char.IsNumber(e.KeyChar))
+                        {
+                            e.Handled = true;
+                        }
+                        break;
+                }
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void IsText_Keypress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (checkRequiredField(Convert.ToInt32(storeReqDataGridView.CurrentRow.Index)))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private bool checkRequiredField(int rowNumber)
+        {
+            switch(rowNumber)
+            {
+                case 6:
+                    if (storeReqDataGridView.Rows[rowNumber].Cells[5].Value == null)
+                    {
+                        MessageBox.Show("Enter required qty.");
+                        return false;
+                    }
+                    break;
+                case 7:
+                    if (storeReqDataGridView.Rows[rowNumber].Cells[5].Value == null)
+                    {
+                        MessageBox.Show("Enter required qty.");
+                        return false;
+                    }
+                    else if (storeReqDataGridView.Rows[rowNumber].Cells[6].Value == null)
+                    {
+                        MessageBox.Show("Enter issue qty.");
+                        return false;
+                    }
+                    break; 
+            }
+            return true;
+        }
+
+        private void departmentComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            deptCodeLabel.Text = (departmentComboBox.SelectedValue != null? departmentComboBox.SelectedValue.ToString().Trim() : "");
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            ClearAllFields();
+        }
+
+        private void ClearAllFields()
+        {
+            departmentComboBox.SelectedIndex = -1;
+            deptCodeLabel.Text = "";
+            purposeTextBox.Clear();
+            requisitionDate.Value = DateTime.Now;
+            stationaryComboBox.SelectedIndex = -1;
+            itemComboBox.SelectedIndex = -1;
+            itemCategoryComboBox.SelectedIndex = -1;
+            itemListView.Items.Clear();
+            storeReqDataGridView.Rows.Clear();
+        }
+        
+    }
+}

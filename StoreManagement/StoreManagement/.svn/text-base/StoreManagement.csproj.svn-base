@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BE6429F-941E-446C-A95E-7B56760FCAD0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StoreManagement</RootNamespace>
+    <AssemblyName>StoreManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>StoreIcon_256.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPExplorerBar">
+      <HintPath>..\..\XPExplorerBar\bin\Debug\XPExplorerBar.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\GRRManager.cs" />
+    <Compile Include="BLL\MasterSetupManager.cs" />
+    <Compile Include="BLL\PurchaseManager.cs" />
+    <Compile Include="BLL\SRRManager.cs" />
+    <Compile Include="BLL\StoreManager.cs" />
+    <Compile Include="DAL\DAO\Stationary.cs" />
+    <Compile Include="DAL\DAO\Company.cs" />
+    <Compile Include="DAL\DAO\GRR.cs" />
+    <Compile Include="DAL\DAO\LoginUser.cs" />
+    <Compile Include="DAL\DAO\CostHead.cs" />
+    <Compile Include="DAL\DAO\Menufacture.cs" />
+    <Compile Include="DAL\DAO\Product.cs" />
+    <Compile Include="DAL\DAO\Requisition.cs" />
+    <Compile Include="DAL\DAO\SRR.cs" />
+    <Compile Include="DAL\DAO\Supplier.cs" />
+    <Compile Include="DAL\GATEWAY\DBConnection.cs" />
+    <Compile Include="DAL\GATEWAY\GRRGateway.cs" />
+    <Compile Include="DAL\GATEWAY\LogInGateway.cs" />
+    <Compile Include="DAL\GATEWAY\MasterSetupGateway.cs" />
+    <Compile Include="DAL\GATEWAY\PurchaseGateway.cs" />
+    <Compile Include="DAL\GATEWAY\SRRGateway.cs" />
+    <Compile Include="DAL\GATEWAY\StoreGateway.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CategoryEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CategoryEntryUI.Designer.cs">
+      <DependentUpon>CategoryEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CompanySettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CompanySettingsUI.Designer.cs">
+      <DependentUpon>CompanySettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DepartmentEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DepartmentEntryUI.Designer.cs">
+      <DependentUpon>DepartmentEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeptOfUnitEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DeptOfUnitEntryUI.Designer.cs">
+      <DependentUpon>DeptOfUnitEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeptWiseBudgetUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DeptWiseBudgetUI.Designer.cs">
+      <DependentUpon>DeptWiseBudgetUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EmployeeEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EmployeeEntryUI.Designer.cs">
+      <DependentUpon>EmployeeEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GRREntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GRREntryUI.Designer.cs">
+      <DependentUpon>GRREntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GRRInspectionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GRRInspectionUI.Designer.cs">
+      <DependentUpon>GRRInspectionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GrrReceiveActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GrrReceiveActionUI.Designer.cs">
+      <DependentUpon>GrrReceiveActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItemEntryUI.Designer.cs">
+      <DependentUpon>ItemEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManagemetnDashBoardActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManagemetnDashBoardActionUI.Designer.cs">
+      <DependentUpon>ManagemetnDashBoardActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OrderInspectionActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OrderInspectionActionUI.Designer.cs">
+      <DependentUpon>OrderInspectionActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PendingRequisitionActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PendingRequisitionActionUI.Designer.cs">
+      <DependentUpon>PendingRequisitionActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PurchaseOrderActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PurchaseOrderActionUI.Designer.cs">
+      <DependentUpon>PurchaseOrderActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PurchaseRequisitionActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PurchaseRequisitionActionUI.Designer.cs">
+      <DependentUpon>PurchaseRequisitionActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PurchaseRequisitionEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PurchaseRequisitionEntryUI.Designer.cs">
+      <DependentUpon>PurchaseRequisitionEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemSubCategoryEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItemSubCategoryEntryUI.Designer.cs">
+      <DependentUpon>ItemSubCategoryEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemCategoryEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItemCategoryEntryUI.Designer.cs">
+      <DependentUpon>ItemCategoryEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StationerySettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StationerySettingsUI.Designer.cs">
+      <DependentUpon>StationerySettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManufactEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManufactEntryUI.Designer.cs">
+      <DependentUpon>ManufactEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManufacturerSettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ManufacturerSettingsUI.Designer.cs">
+      <DependentUpon>ManufacturerSettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MapicsCodeEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MapicsCodeEntryUI.Designer.cs">
+      <DependentUpon>MapicsCodeEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MapicsCodeOfDeptUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MapicsCodeOfDeptUI.Designer.cs">
+      <DependentUpon>MapicsCodeOfDeptUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MAPICsListUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MAPICsListUI.Designer.cs">
+      <DependentUpon>MAPICsListUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MDIParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MDIParent.Designer.cs">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PurchaseOrderEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PurchaseOrderEntryUI.Designer.cs">
+      <DependentUpon>PurchaseOrderEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RequisitoinApprovalActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RequisitoinApprovalActionUI.Designer.cs">
+      <DependentUpon>RequisitoinApprovalActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SRREntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SRREntryUI.Designer.cs">
+      <DependentUpon>SRREntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SRRsListUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SRRsListUI.Designer.cs">
+      <DependentUpon>SRRsListUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreDashboardActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreDashboardActionUI.Designer.cs">
+      <DependentUpon>StoreDashboardActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StoreRequisitionActionUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StoreRequisitionActionUI.Designer.cs">
+      <DependentUpon>StoreRequisitionActionUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SupplierEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SupplierEntryUI.Designer.cs">
+      <DependentUpon>SupplierEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SupplierSettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SupplierSettingsUI.Designer.cs">
+      <DependentUpon>SupplierSettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UnitEntryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UnitEntryUI.Designer.cs">
+      <DependentUpon>UnitEntryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserManagementSettingsUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserManagementSettingsUI.Designer.cs">
+      <DependentUpon>UserManagementSettingsUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UTILITY\AutoCompleteTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UTILITY\DynamicControlFill.cs" />
+    <Compile Include="UTILITY\EmailValidator.cs" />
+    <Compile Include="UTILITY\MenuStripCustomization.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UTILITY\MultilineComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UTILITY\SendMail.cs" />
+    <Compile Include="UTILITY\SpellAmount.cs" />
+    <Compile Include="UTILITY\Verification.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CategoryEntryUI.resx">
+      <DependentUpon>CategoryEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CompanySettingsUI.resx">
+      <DependentUpon>CompanySettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DepartmentEntryUI.resx">
+      <DependentUpon>DepartmentEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeptOfUnitEntryUI.resx">
+      <DependentUpon>DeptOfUnitEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeptWiseBudgetUI.resx">
+      <DependentUpon>DeptWiseBudgetUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EmployeeEntryUI.resx">
+      <DependentUpon>EmployeeEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GRREntryUI.resx">
+      <DependentUpon>GRREntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GRRInspectionUI.resx">
+      <DependentUpon>GRRInspectionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GrrReceiveActionUI.resx">
+      <DependentUpon>GrrReceiveActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemEntryUI.resx">
+      <DependentUpon>ItemEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManagemetnDashBoardActionUI.resx">
+      <DependentUpon>ManagemetnDashBoardActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderInspectionActionUI.resx">
+      <DependentUpon>OrderInspectionActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PendingRequisitionActionUI.resx">
+      <DependentUpon>PendingRequisitionActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PurchaseOrderActionUI.resx">
+      <DependentUpon>PurchaseOrderActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PurchaseRequisitionActionUI.resx">
+      <DependentUpon>PurchaseRequisitionActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PurchaseRequisitionEntryUI.resx">
+      <DependentUpon>PurchaseRequisitionEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemSubCategoryEntryUI.resx">
+      <DependentUpon>ItemSubCategoryEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemCategoryEntryUI.resx">
+      <DependentUpon>ItemCategoryEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StationerySettingsUI.resx">
+      <DependentUpon>StationerySettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManufactEntryUI.resx">
+      <DependentUpon>ManufactEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ManufacturerSettingsUI.resx">
+      <DependentUpon>ManufacturerSettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MapicsCodeEntryUI.resx">
+      <DependentUpon>MapicsCodeEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MapicsCodeOfDeptUI.resx">
+      <DependentUpon>MapicsCodeOfDeptUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MAPICsListUI.resx">
+      <DependentUpon>MAPICsListUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MDIParent.resx">
+      <DependentUpon>MDIParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PurchaseOrderEntryUI.resx">
+      <DependentUpon>PurchaseOrderEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RequisitoinApprovalActionUI.resx">
+      <DependentUpon>RequisitoinApprovalActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SRREntryUI.resx">
+      <DependentUpon>SRREntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SRRsListUI.resx">
+      <DependentUpon>SRRsListUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreDashboardActionUI.resx">
+      <DependentUpon>StoreDashboardActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StoreRequisitionActionUI.resx">
+      <DependentUpon>StoreRequisitionActionUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SupplierEntryUI.resx">
+      <DependentUpon>SupplierEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SupplierSettingsUI.resx">
+      <DependentUpon>SupplierSettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UnitEntryUI.resx">
+      <DependentUpon>UnitEntryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserManagementSettingsUI.resx">
+      <DependentUpon>UserManagementSettingsUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Style\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FlatTabControl\FlatTabControl.csproj">
+      <Project>{96002CA1-D295-4ED5-9B08-92346C1BFA18}</Project>
+      <Name>FlatTabControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CustomBorderForm\CustomBorderOfForm.csproj">
+      <Project>{A70243E7-71C9-4AB3-A43B-62FC24E2D163}</Project>
+      <Name>CustomBorderOfForm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleIcon1_16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleIcon1_24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleIcon1_32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleIcon16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleIcon24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TitleIcon32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addB16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addB24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complete24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complete32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ref48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bookmark-delete.ico" />
+    <Content Include="StoreIcon_256.ico" />
+    <Content Include="StoreIcon_64.ico" />
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

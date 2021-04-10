@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using StoreManagement.BLL;
+using StoreManagement.DAL.DAO;
+using StoreManagement.UTILITY;
+
+namespace StoreManagement.UI
+{
+    public partial class PurchaseOrderActionUI : Form
+    {
+        #region Veriables
+            private DynamicControlFill fillControll = null;
+            private PurchaseManager purchaseManager = null;
+        #endregion
+
+        public PurchaseOrderActionUI()
+        {
+            InitializeComponent();
+            SetObjects();
+        }
+
+        private void SetObjects()
+        {
+            fillControll = new DynamicControlFill();
+            purchaseManager = new PurchaseManager();
+        }
+
+        private void ShowList()
+        {
+            switch (purchaseOrderTabControl.SelectedIndex)
+            {
+                case 0:
+                    fillControll.fillListView(pendingListView, purchaseManager.GetPurchaseRequistionList("1", null), "Requisition No.,Date,Total Item,Ordered Qty,", "100,100,100,100,");
+                    break;
+                case 1:
+                    fillControll.fillListView(completeListView, purchaseManager.GetPurchaseOrderList("1", null), "Order No.,Date,Supplier,Total Item", "100,100,250,100");
+                    break;
+            }
+        }
+
+        private void PurchaseOrderListUI_Load(object sender, EventArgs e)
+        {
+            taskPane1.UseCustomTheme(fillControll.GetAppPath() + @"\CustomeStyle\shellstyle.dll");
+            ShowList();
+        }
+
+        private void purchaseOrderTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowList();
+        }
+    }
+}

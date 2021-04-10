@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/BLL
+END
+SRRManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/BLL/SRRManager.cs
+END
+GRRManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/BLL/GRRManager.cs
+END
+PurchaseManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/BLL/PurchaseManager.cs
+END
+MasterSetupManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/BLL/MasterSetupManager.cs
+END
+StoreManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/BLL/StoreManager.cs
+END

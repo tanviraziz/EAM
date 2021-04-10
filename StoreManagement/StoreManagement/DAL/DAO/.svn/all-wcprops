@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO
+END
+Requisition.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/Requisition.cs
+END
+Stationary.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/Stationary.cs
+END
+Menufacture.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/Menufacture.cs
+END
+Product.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/Product.cs
+END
+Supplier.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/Supplier.cs
+END
+Company.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/Company.cs
+END
+SRR.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/SRR.cs
+END
+LoginUser.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/LoginUser.cs
+END
+CostHead.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/CostHead.cs
+END
+GRR.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/DAO/GRR.cs
+END

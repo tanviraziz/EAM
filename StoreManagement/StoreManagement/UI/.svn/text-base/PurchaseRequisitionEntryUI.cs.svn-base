@@ -1,0 +1,311 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using StoreManagement.BLL;
+using StoreManagement.DAL.DAO;
+using StoreManagement.UTILITY;
+using System.Text.RegularExpressions;
+
+namespace StoreManagement.UI
+{
+    public partial class PurchaseRequisitionEntryUI : Form
+    {
+        #region Veriables
+            private bool IsEdit = false;
+            private Requisition requisition = null;
+            private MasterSetupManager masterManager = null;
+            private DynamicControlFill fillControl = null;
+            private PurchaseManager purchaseReqManager = null;
+        #endregion
+
+        private void SetObjects()
+        {
+            fillControl = new DynamicControlFill();
+            masterManager = new MasterSetupManager();
+            purchaseReqManager = new PurchaseManager();
+        }
+
+        private void HeaderCheckBOx()
+        {
+            // customize dataviewgrid, add checkbox column
+            DataGridViewCheckBoxColumn checkboxColumn = new DataGridViewCheckBoxColumn();
+            checkboxColumn.Width = 30;
+            checkboxColumn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            storeReqDataGridView.Columns.Insert(0, checkboxColumn);
+
+            // add checkbox header
+            Rectangle rect = storeReqDataGridView.GetCellDisplayRectangle(0, -1, true);
+            // set checkbox header to center of header cell. +1 pixel to position correctly.
+            rect.X = rect.Location.X + (rect.Width / 4);
+
+            CheckBox checkboxHeader = new CheckBox();
+            checkboxHeader.Name = "checkboxHeader";
+            checkboxHeader.Size = new Size(18, 18);
+            checkboxHeader.Location = rect.Location;
+            checkboxHeader.CheckedChanged += new EventHandler(checkboxHeader_CheckedChanged);
+
+            storeReqDataGridView.Controls.Add(checkboxHeader);
+        }
+
+        private void checkboxHeader_CheckedChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < storeReqDataGridView.RowCount; i++)
+            {
+                storeReqDataGridView[0, i].Value = ((CheckBox)storeReqDataGridView.Controls.Find("checkboxHeader", true)[0]).Checked;
+            }
+            storeReqDataGridView.EndEdit();
+        }
+
+        public PurchaseRequisitionEntryUI()
+        {
+            InitializeComponent();
+            SetObjects();
+        }
+
+        private void PurchaseRequisitionUI_Load(object sender, EventArgs e)
+        {            
+            fillControl.fillCombo(sCategoryComboBox, masterManager.GetStationaryCategoryList("1", null), "Category", "Code");
+            sCategoryComboBox.SelectedIndex = -1;
+
+            fillControl.fillCombo(unitComboBox, masterManager.GetCompanyUnitList("1", null), "Unit", "Code");
+            unitComboBox.SelectedIndex = -1;
+
+            //fill the update date in form
+            SetUpdateData(null);            
+        }
+
+        private void SetUpdateData(string orderNo)
+        {
+            try
+            {
+                DataTable currentStock;
+                currentStock = new StoreManager().GetCurrentStock("1", orderNo);
+                //if(invoice == null)
+                //{
+                //    invoice = new Invoice();
+                //}
+
+                if (currentStock.Rows.Count > 0)
+                {
+                    int n;
+
+                    foreach (DataRow dr in currentStock.Rows)
+                    {
+                        //fill the MRR GridView
+                        n = storeReqDataGridView.Rows.Add();
+                        storeReqDataGridView.Rows[n].Cells[1].Value = dr["Material"].ToString();
+                        storeReqDataGridView.Rows[n].Cells[4].Value = dr["Stock"].ToString();
+                        storeReqDataGridView.Rows[n].Cells[7].Value = dr["Code"].ToString();
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        #region Radio Button
+
+        private void singleRadioButton_Click(object sender, EventArgs e)
+        {
+            if (singleRadioButton.Checked)
+            {
+                new DynamicControlFill().fillCombo(timePeriodComboBox, new MasterSetupManager().GetTimePeriod("1", "11"), "Period", "Code");
+            }            
+        }
+
+        private void doubleRadioButton_Click(object sender, EventArgs e)
+        {
+            if (doubleRadioButton.Checked)
+            {
+                new DynamicControlFill().fillCombo(timePeriodComboBox, new MasterSetupManager().GetTimePeriod("2", "12"), "Period", "Code");
+            }
+        }
+
+        private void tripleRadioButton_Click(object sender, EventArgs e)
+        {
+            if (tripleRadioButton.Checked)
+            {
+                new DynamicControlFill().fillCombo(timePeriodComboBox, new MasterSetupManager().GetTimePeriod("3", "13"), "Period", "Code");
+            }
+        }
+
+        private void quarterRadioButton_Click(object sender, EventArgs e)
+        {
+            if (quarterRadioButton.Checked)
+            {
+                new DynamicControlFill().fillCombo(timePeriodComboBox, new MasterSetupManager().GetTimePeriod("4", "14"), "Period", "Code");
+            }
+        }
+
+        #endregion
+
+        //savae the requisition
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (IsValid())
+            {
+                if (purchaseReqManager.PrrManagement(requisition))
+                {
+                    MessageBox.Show("Saved Successfully.");
+                }
+                requisition = null;
+            }
+
+        }
+
+        //validation
+        private bool IsValid()
+        {
+            if (string.IsNullOrEmpty(sCategoryComboBox.Text.Trim()))
+            {
+                MessageBox.Show("Select a category.");
+                sCategoryComboBox.Focus();
+                return false;
+            }
+            else if (string.IsNullOrEmpty(timePeriodComboBox.Text.Trim()))
+            {
+                MessageBox.Show("Select month.");
+                timePeriodComboBox.Focus();
+                return false;
+            }
+            else if (string.IsNullOrEmpty(yearTextBox.Text.Trim()))
+            {
+                MessageBox.Show("Enter year.");
+                yearTextBox.Focus();
+                return false;
+            }
+            else if (yearTextBox.Text.Trim().Length != 4)
+            {
+                MessageBox.Show("Invalid year.");
+                storeReqDataGridView.Focus();
+                return false;
+            }
+            else if (HaveNoItem())
+            {
+                MessageBox.Show("Select an item from list.");
+                yearTextBox.Focus();
+                return false;
+            }
+            else
+            {
+                SetValues();
+            }
+            return true;
+        }
+
+        private bool HaveNoItem()
+        {
+            foreach (DataGridViewRow gridItem in storeReqDataGridView.Rows)
+            {
+                DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)gridItem.Cells[0];
+                if (chk.Value != null && (bool)chk.Value)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        //set the input data
+        private void SetValues()
+        {
+            if (requisition == null)
+            {
+                requisition = new Requisition();
+            }
+
+            requisition.SCategory = Convert.ToInt16(sCategoryComboBox.SelectedValue.ToString());
+            requisition.TimePeriod = timePeriodComboBox.SelectedValue.ToString().Trim();
+            requisition.PRYear = yearTextBox.Text.Trim();
+            requisition.UnitID = Convert.ToInt16(unitComboBox.SelectedValue.ToString().Trim());
+
+
+            foreach (DataGridViewRow gridItem in storeReqDataGridView.Rows)
+            {
+                if (gridItem.Cells[1].Value != null)
+                {   
+                    //Initialize a new PRR product
+                    Product prrProduct = new Product();
+
+                    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)gridItem.Cells[0];
+                    if (chk.Value != null && (bool)chk.Value)
+                    {
+                        if (IsEdit && (gridItem.Cells[8].Value != null && !string.IsNullOrEmpty(gridItem.Cells[8].Value.ToString())))
+                        {
+                            prrProduct.StockQty = Convert.ToDecimal(gridItem.Cells[4].Value.ToString().Trim());
+                            prrProduct.ReqQty = Convert.ToDecimal(gridItem.Cells[5].Value.ToString().Trim());
+                            prrProduct.Remarks = gridItem.Cells[6].Value.ToString().Trim();
+                            prrProduct.Condition = "2";
+                        }
+                        else
+                        {
+                            prrProduct.PCode = gridItem.Cells[7].Value.ToString().Trim();
+                            prrProduct.StockQty = Convert.ToDecimal(gridItem.Cells[4].Value.ToString().Trim());
+                            prrProduct.ReqQty = Convert.ToDecimal(gridItem.Cells[5].Value.ToString().Trim());
+                            prrProduct.Remarks = gridItem.Cells[6].Value.ToString().Trim();
+                        }
+                        requisition.Products.Add(prrProduct);
+                    }
+                }
+            }
+        }
+
+
+        private void sCategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sCategoryComboBox.SelectedIndex >= 0)
+            {
+                switch (sCategoryComboBox.Text.Trim().ToUpper())
+                {
+                    case "COMPUTER":
+                        fillControl.fillCombo(timePeriodComboBox, masterManager.GetTimePeriod("2", "2"), "Period", "Code");
+                        break;
+                    default:
+                        fillControl.fillCombo(timePeriodComboBox, masterManager.GetTimePeriod("1", "1"), "Period", "Code");
+                        break;
+                }
+                timePeriodComboBox.SelectedIndex = -1;
+            }
+        }
+
+        private void yearTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Regex.IsMatch(e.KeyChar.ToString(), @"[\x08\x2E\d]"))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == 46)
+            {
+                if ((sender as TextBox).Text.Contains("."))
+                    e.Handled = true;
+            }  
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            ClearAllFields();
+        }
+
+        private void ClearAllFields()
+        {
+            sCategoryComboBox.SelectedIndex = -1;
+            timePeriodComboBox.SelectedIndex = -1;
+            yearTextBox.Clear();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
+    }
+}

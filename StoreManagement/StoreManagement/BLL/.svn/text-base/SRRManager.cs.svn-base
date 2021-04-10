@@ -1,0 +1,48 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using StoreManagement.DAL.DAO;
+using StoreManagement.DAL.GATEWAY;
+
+
+namespace StoreManagement.BLL
+{
+    class SRRManager
+    {
+        private SRRGateway srrGateway = null;
+        public SRRManager()
+        {
+            srrGateway = new SRRGateway();
+        }
+
+        #region SRR Managememt
+
+        //Insert, Update and delete GRR
+        public bool SRRManagement(SRR srr)
+        {
+            return srrGateway.SrrManagement(srr);
+        }
+
+        //return the SRR list in a datatable
+        public DataTable GetSRRList(string choice, string condition)
+        {
+            try
+            {
+                DataTable dt = srrGateway.SrrList(choice, condition);
+                if (dt != null)
+                {
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
+
+        #endregion
+    }
+}

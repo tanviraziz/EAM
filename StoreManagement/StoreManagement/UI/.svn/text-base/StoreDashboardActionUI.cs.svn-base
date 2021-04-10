@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using StoreManagement.BLL;
+using StoreManagement.UTILITY;
+
+namespace StoreManagement.UI
+{
+    public partial class StoreDashboardActionUI : Form
+    {
+        #region Variables
+            private DynamicControlFill fillControll = null;
+            private PurchaseManager purchaseManager = null;
+        #endregion
+
+        public StoreDashboardActionUI()
+        {
+            InitializeComponent();
+            SetObjets();
+        }
+
+        private void SetObjets()
+        {
+            fillControll = new DynamicControlFill();
+            purchaseManager = new PurchaseManager();
+        }
+
+        private void StoreDashboardUI_Load(object sender, EventArgs e)
+        {
+            fillControll.fillListView(xpListView1, purchaseManager.GetPurchaseRequistionList("1", null), "Requisition No.,Date,Total Item,Ordered Qty,", "150,200,200,200,");
+            fillControll.fillListView(xpListView2, purchaseManager.GetPurchaseRequistionList("1", null), "Requisition No.,Date,Total Item,Ordered Qty,", "150,200,200,200,");
+            fillControll.fillListView(xpListView3, purchaseManager.GetPurchaseRequistionList("1", null), "Requisition No.,Date,Total Item,Ordered Qty,", "150,200,200,200,");
+        }
+    }
+}

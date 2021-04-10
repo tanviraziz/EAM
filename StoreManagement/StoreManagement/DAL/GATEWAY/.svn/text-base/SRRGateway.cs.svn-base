@@ -1,0 +1,198 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+using StoreManagement.DAL.DAO;
+
+namespace StoreManagement.DAL.GATEWAY
+{
+    class SRRGateway
+    {
+        #region SRR Management
+
+        //manage Store requisition(insert, update, delete)
+        public Boolean SrrManagement(SRR srr)
+        {
+            SqlTransaction transaction;
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+
+            sqlConnection.Open();
+            transaction = sqlConnection.BeginTransaction();
+            SqlCommand cmd = new SqlCommand("SrrManagement", sqlConnection, transaction);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter SRRID = cmd.Parameters.Add("@SRRID", SqlDbType.BigInt);
+                SRRID.Direction = ParameterDirection.Input;
+                SRRID.Value = srr.SRRID;
+
+                SqlParameter SRRDate = cmd.Parameters.Add("@SRRDate", SqlDbType.DateTime);
+                SRRDate.Direction = ParameterDirection.Input;
+                SRRDate.Value = (srr.SRRDate == null ? DateTime.Now : srr.SRRDate);
+
+                SqlParameter DeptUID = cmd.Parameters.Add("@DeptUID", SqlDbType.Int);
+                DeptUID.Direction = ParameterDirection.Input;
+                DeptUID.Value = srr.DeptUID;
+
+                SqlParameter Purpose = cmd.Parameters.Add("@Purpose", SqlDbType.VarChar, 250);
+                Purpose.Direction = ParameterDirection.Input;
+                Purpose.Value = srr.Purpose;
+
+                SqlParameter RequisitionBy = cmd.Parameters.Add("@RequisitionBy", SqlDbType.VarChar, 10);
+                RequisitionBy.Direction = ParameterDirection.Input;
+                RequisitionBy.Value = srr.RequisitionBy;
+
+                SqlParameter IssuedBy = cmd.Parameters.Add("@IssuedBy", SqlDbType.VarChar, 10);
+                IssuedBy.Direction = ParameterDirection.Input;
+                IssuedBy.Value = srr.IssuedBy;
+
+                SqlParameter ReceivedBy = cmd.Parameters.Add("@ReceivedBy", SqlDbType.VarChar, 10);
+                ReceivedBy.Direction = ParameterDirection.Input;
+                ReceivedBy.Value = srr.ReceivedBy;
+
+                SqlParameter ApprovedBy = cmd.Parameters.Add("@ApprovedBy", SqlDbType.VarChar, 10);
+                ApprovedBy.Direction = ParameterDirection.Input;
+                ApprovedBy.Value = srr.ApprovedBy;
+
+                SqlParameter Condition = cmd.Parameters.Add("@Condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                //Condition.Value = mapicsCode.Condtion;
+
+                SqlParameter Flag = cmd.Parameters.Add("@Flag", SqlDbType.VarChar, 10);
+                Flag.Direction = ParameterDirection.Output;
+
+
+                cmd.ExecuteNonQuery();
+                if (cmd.Parameters["@Flag"].Value.ToString().Trim() == "1")
+                {
+                    return false;
+                }
+                
+            }
+            catch
+            {
+                //return e.Message;
+                return false;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+                sqlConnection.Dispose();
+                srr = null;
+            }
+            return true;
+        }
+
+        public Boolean SrrDetailManagement(Product item)
+        {
+            SqlTransaction transaction;
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+
+            sqlConnection.Open();
+            transaction = sqlConnection.BeginTransaction();
+            SqlCommand cmd = new SqlCommand("SrrDetailManagement", sqlConnection, transaction);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter SlNo = cmd.Parameters.Add("@SlNo", SqlDbType.BigInt);
+                SlNo.Direction = ParameterDirection.Input;
+                SlNo.Value = item.PID;
+
+                SqlParameter GoodsID = cmd.Parameters.Add("@GoodsID", SqlDbType.Int);
+                GoodsID.Direction = ParameterDirection.Input;
+                GoodsID.Value = item.PCode;
+
+                SqlParameter SCatID = cmd.Parameters.Add("@SCatID", SqlDbType.SmallInt);
+                SCatID.Direction = ParameterDirection.Input;
+                SCatID.Value = item.StationaryID;
+
+                SqlParameter Required = cmd.Parameters.Add("@Required", SqlDbType.Decimal);
+                Required.Direction = ParameterDirection.Input;
+                Required.Value = item.ReqQty;
+
+                SqlParameter IssueQty = cmd.Parameters.Add("@IssueQty", SqlDbType.Decimal);
+                IssueQty.Direction = ParameterDirection.Input;
+                IssueQty.Value = item.IssueQty;
+
+                SqlParameter Rate = cmd.Parameters.Add("@Rate", SqlDbType.Decimal);
+                Rate.Direction = ParameterDirection.Input;
+                Rate.Value = item.UnitPrice;
+
+                SqlParameter EntryBy = cmd.Parameters.Add("@Remarks", SqlDbType.VarChar, 500);
+                EntryBy.Direction = ParameterDirection.Input;
+                EntryBy.Value = item.Remarks;
+
+                SqlParameter Condition = cmd.Parameters.Add("@Condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                Condition.Value = item.Condition;
+
+                SqlParameter Flag = cmd.Parameters.Add("@Flag", SqlDbType.VarChar, 10);
+                Flag.Direction = ParameterDirection.Output;
+
+
+                cmd.ExecuteNonQuery();
+                if (cmd.Parameters["@Flag"].Value.ToString().Trim() == "1")
+                {
+                    return false;
+                }
+                //End:inasert order information  
+            }
+            catch
+            {
+                //return e.Message;
+                return false;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+                sqlConnection.Dispose();
+                item = null;
+            }
+            return true;
+        }
+
+        //get all SRR list
+        public DataTable SrrList(string choice, string condition)
+        {
+            DataTable dt = new DataTable();
+            string queryString = "GetSrrList";
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+            SqlCommand cmd = new SqlCommand(queryString, sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter Choice = cmd.Parameters.Add("@choice", SqlDbType.VarChar, 10);
+                Choice.Direction = ParameterDirection.Input;
+                Choice.Value = choice;
+
+                SqlParameter Condition = cmd.Parameters.Add("@condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                Condition.Value = condition;
+
+                SqlDataAdapter sqlDataAdapterObj = new SqlDataAdapter(cmd);
+                sqlDataAdapterObj.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+            }
+        }
+
+        #endregion
+    }
+}

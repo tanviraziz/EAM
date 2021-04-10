@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using StoreManagement.DAL.DAO;
+using StoreManagement.DAL.GATEWAY;
+
+namespace StoreManagement.BLL
+{
+    class PurchaseManager
+    {
+        #region Veriables
+            PurchaseGateway purchaseGateway = null;
+        #endregion
+
+        public PurchaseManager()
+        {
+            purchaseGateway = new PurchaseGateway();
+        }
+
+        #region PUrchase Requisition Management
+        //Manage the purchase requisition(Insert,update,delete)
+        public bool PrrManagement(Requisition prr)
+        {
+            return purchaseGateway.PrrManagement(prr);
+        }
+
+        //return theGRR list in a datatable
+        public DataTable GetPurchaseRequistionList(string choice, string condition)
+        {
+            try
+            {
+                DataTable dt = purchaseGateway.PurchaseRequistion(choice, condition);
+                if (dt != null)
+                {
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
+        #endregion
+
+        #region PUrchase Order Management
+        //Manage the purchase requisition(Insert,update,delete)
+        public bool PurOrdManagement(Requisition prr)
+        {
+            return purchaseGateway.PurOrdManagement(prr);
+        }
+
+        //return theGRR list in a datatable
+        public DataTable GetPurchaseOrderList(string choice, string condition)
+        {
+            try
+            {
+                DataTable dt = purchaseGateway.PurchaseOrder(choice, condition);
+                if (dt != null)
+                {
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
+        #endregion
+
+    }
+}

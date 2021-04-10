@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<configuration>
+  
+      <!--useLegacyV2RuntimeActivationPolicy="true"-->
+      <startup useLegacyV2RuntimeActivationPolicy="true">
+          <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+      </startup>
+    
+      <appSettings>          
+          <!--<add key="cnnString" value="Data Source=SOFT-DTA;Database=StoreManagement;User Id=sa;Password=sa" />-->
+        <add key="cnnString" value="Data Source=SOFT-DTA;Database=StationaryManagement;User Id=sa;Password=sa" />
+      </appSettings>
+  
+</configuration>

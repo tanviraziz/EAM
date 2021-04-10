@@ -1,0 +1,277 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Data.SqlClient;
+using StoreManagement.DAL.DAO;
+
+namespace StoreManagement.DAL.GATEWAY
+{
+    class GRRGateway
+    {
+        #region GRR Management
+
+        //manage Goods Receive Inspection(insert, update, delete)
+        public Boolean GrIManagement(GRR grr)
+        {
+            SqlTransaction transaction;
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+
+            sqlConnection.Open();
+            transaction = sqlConnection.BeginTransaction();
+            SqlCommand cmd = new SqlCommand("GrInspecManagement", sqlConnection, transaction);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter GRRID = cmd.Parameters.Add("@GRRID", SqlDbType.BigInt);
+                GRRID.Direction = ParameterDirection.Input;
+                GRRID.Value = grr.GrrId;
+
+                SqlParameter PurOrdID = cmd.Parameters.Add("@PurOrdID", SqlDbType.BigInt);
+                PurOrdID.Direction = ParameterDirection.Input;
+                PurOrdID.Value = grr.PurchseOrdID;
+
+                SqlParameter ChallanNo = cmd.Parameters.Add("@ChallanNo", SqlDbType.VarChar, 100);
+                ChallanNo.Direction = ParameterDirection.Input;
+                ChallanNo.Value = grr.InvoiceNo;
+
+                SqlParameter ChallanDate = cmd.Parameters.Add("@ChallanDate", SqlDbType.DateTime);
+                ChallanDate.Direction = ParameterDirection.Input;
+                ChallanDate.Value = grr.InvoiceDate;
+
+                SqlParameter Acceptance = cmd.Parameters.Add("@Acceptance", SqlDbType.VarChar, 10);
+                Acceptance.Direction = ParameterDirection.Input;
+                Acceptance.Value = grr.Acceptance;
+
+                SqlParameter Comments = cmd.Parameters.Add("@Comments", SqlDbType.VarChar, 500);
+                Comments.Direction = ParameterDirection.Input;
+                Comments.Value = grr.Comments;
+
+                SqlParameter EntryBy = cmd.Parameters.Add("@EntryBy", SqlDbType.VarChar, 10);
+                EntryBy.Direction = ParameterDirection.Input;
+                EntryBy.Value = LoginUser.UserID;
+
+                SqlParameter Condition = cmd.Parameters.Add("@Condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                Condition.Value = grr.Condition;
+
+                SqlParameter Flag = cmd.Parameters.Add("@Flag", SqlDbType.VarChar, 10);
+                Flag.Direction = ParameterDirection.Output;
+              
+
+                //Start:inasert order information                
+                cmd.ExecuteNonQuery();
+                if (cmd.Parameters["@Flag"].Value.ToString().Trim() == "1")
+                {
+                    transaction.Rollback();
+                    return false;
+                }
+                //End:inasert order information 
+
+                //Start:inasert grr item information
+                if (grr.Products.Count > 0)
+                {
+                    foreach (var grrItem in grr.Products)
+                    {
+                        if (!GrIDetailManagement(grrItem, sqlConnection, transaction))
+                        {
+                            transaction.Rollback();
+                            return false;
+                        }
+                    }
+                }
+                //End:inasert grr item information  
+                
+                transaction.Commit();
+            }
+            catch
+            {
+                //return e.Message;
+                return false;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+                sqlConnection.Dispose();
+                grr = null;
+            }
+            return true;
+        }
+
+        private Boolean GrIDetailManagement(Product grIItem, SqlConnection connection, SqlTransaction transaction)
+        {
+            SqlConnection sqlConnection = connection;
+            SqlCommand cmd = new SqlCommand("GrrInspecDetailManagement", sqlConnection, transaction);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                SqlParameter SlNO = cmd.Parameters.Add("@SlNO", SqlDbType.BigInt);
+                SlNO.Direction = ParameterDirection.Input;
+                SlNO.Value = grIItem.PID;
+
+                SqlParameter ChallanItem = cmd.Parameters.Add("@ChallanItem", SqlDbType.VarChar, 350);
+                ChallanItem.Direction = ParameterDirection.Input;
+                ChallanItem.Value = grIItem.Pname;
+
+                SqlParameter QtyBfrInspection = cmd.Parameters.Add("@QtyBfrInspection", SqlDbType.Decimal);
+                QtyBfrInspection.Direction = ParameterDirection.Input;
+                QtyBfrInspection.Value = grIItem.QtyBoforeInspec;
+
+                SqlParameter QtyAftInspection = cmd.Parameters.Add("@QtyAftInspection", SqlDbType.Decimal);
+                QtyAftInspection.Direction = ParameterDirection.Input;
+                QtyAftInspection.Value = grIItem.QtyAfterInspec;
+
+                SqlParameter Remarks = cmd.Parameters.Add("@Remarks", SqlDbType.TinyInt);
+                Remarks.Direction = ParameterDirection.Input;
+                Remarks.Value = grIItem.InspecRemarks;
+
+                SqlParameter Condition = cmd.Parameters.Add("@Condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                Condition.Value = grIItem.Condition;
+
+                SqlParameter Flag = cmd.Parameters.Add("@Flag", SqlDbType.VarChar, 10);
+                Flag.Direction = ParameterDirection.Output;
+
+                cmd.ExecuteNonQuery();
+                if (cmd.Parameters["@Flag"].Value.ToString().Trim() == "1")
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                cmd.Dispose();
+                grIItem = null;
+            }
+            return true;
+        }
+
+        //Send the GRR in stock
+        public Boolean GrrToStock(GRR grr)
+        {
+            SqlTransaction transaction;
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+
+            sqlConnection.Open();
+            transaction = sqlConnection.BeginTransaction();
+            SqlCommand cmd = new SqlCommand("SendtoStock", sqlConnection, transaction);
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter GRRID = cmd.Parameters.Add("@GRRID", SqlDbType.BigInt);
+                GRRID.Direction = ParameterDirection.Input;
+                GRRID.Value = grr.GrrId;
+
+                SqlParameter CostCntCode = cmd.Parameters.Add("@CostCntCode", SqlDbType.VarChar, 100);
+                CostCntCode.Direction = ParameterDirection.Input;
+                CostCntCode.Value = grr.CostCenterCode;
+
+                SqlParameter UnitID = cmd.Parameters.Add("@UnitID", SqlDbType.SmallInt);
+                UnitID.Direction = ParameterDirection.Input;
+                UnitID.Value = grr.UnitID;  
+
+                SqlParameter Flag = cmd.Parameters.Add("@Flag", SqlDbType.VarChar, 10);
+                Flag.Direction = ParameterDirection.Output;                              
+
+                cmd.ExecuteNonQuery();
+                if (cmd.Parameters["@Flag"].Value.ToString().Trim() == "1")
+                {
+                    return false;
+                }                
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+                sqlConnection.Dispose();
+                grr = null;
+            }
+            return true;
+        }
+
+        //get all company unit list
+        public DataTable OrderInspectionList(string choice, string condition)
+        {
+            DataTable dt = new DataTable();
+            string queryString = "GetOrderInspectionList";
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+            SqlCommand cmd = new SqlCommand(queryString, sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter Choice = cmd.Parameters.Add("@choice", SqlDbType.VarChar, 10);
+                Choice.Direction = ParameterDirection.Input;
+                Choice.Value = choice;
+
+                SqlParameter Condition = cmd.Parameters.Add("@condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                Condition.Value = condition;
+
+                SqlDataAdapter sqlDataAdapterObj = new SqlDataAdapter(cmd);
+                sqlDataAdapterObj.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+            }
+        }
+
+        //get all company unit list
+        public DataTable GrrList(string choice, string condition)
+        {
+            DataTable dt = new DataTable();
+            string queryString = "GetGrrList";
+            DBConnection dbConnection = new DBConnection();
+            SqlConnection sqlConnection = dbConnection.GetConnection;
+            SqlCommand cmd = new SqlCommand(queryString, sqlConnection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                SqlParameter Choice = cmd.Parameters.Add("@choice", SqlDbType.VarChar, 10);
+                Choice.Direction = ParameterDirection.Input;
+                Choice.Value = choice;
+
+                SqlParameter Condition = cmd.Parameters.Add("@condition", SqlDbType.VarChar, 10);
+                Condition.Direction = ParameterDirection.Input;
+                Condition.Value = condition;
+
+                SqlDataAdapter sqlDataAdapterObj = new SqlDataAdapter(cmd);
+                sqlDataAdapterObj.Fill(dt);
+                return dt;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                cmd.Dispose();
+                sqlConnection.Close();
+            }
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,301 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using StoreManagement.DAL.DAO;
+using StoreManagement.BLL;
+using StoreManagement.UTILITY;
+
+namespace StoreManagement.UI
+{
+    public partial class GRRInspectionUI : Form
+    {
+        #region Veriables
+        private MasterSetupManager masterManager = null;
+            private PurchaseManager purchaseManager = null;
+            private GRRManager grrManager = null;
+            private DynamicControlFill fillControl = null;
+            private GRR grr = null;
+            private bool IsEdit = false;
+            private string PurchaseOrderID;
+        #endregion
+
+        public GRRInspectionUI()
+        {
+            InitializeComponent();
+            SetObjects();
+        }
+
+        private void SetObjects()
+        {
+            masterManager = new MasterSetupManager();
+            purchaseManager = new PurchaseManager();
+            grrManager = new GRRManager();
+            fillControl = new DynamicControlFill();
+        }
+
+        //#region Form custom border
+
+        //int borderRadius = 30;
+        //protected override void OnPaint(System.Windows.Forms.PaintEventArgs e)
+        //{
+        //    base.OnPaint(e);
+        //    Graphics g = e.Graphics;
+        //    Pen p = new Pen(Color.Black);
+        //    int height = Height;
+        //    int width = Width;
+        //    // 4 Border Lines
+        //    // x1,y1 -----> x2 y2 Left Border Line
+        //    // x3y3  -----> x4,y4 Bottom Border Line
+        //    // x5,y5 -----> x6,y6 Right Border Line
+        //    // x7,y7 -----> x8,y8 Top Border Line
+
+        //    // x1,y1 ( Left Top), x2,y2 ( Left Bottom of Left Border), x3,y3 (Left Bottom of Bottom Border),  x4,y4 (Right Bottom of Bottom Border)
+        //    int x1 = 0, y1 = 0, x2 = 0, y2 = Height, x3 = 0, y3 = Height, x4 = Width, y4 = Height;
+        //    // x5,y5 ( Bottom Right) x6,y6 (Top Right) x7,y7 Right Top
+        //    int x5 = Width, y5 = Height, x6 = Width, y6 = 0, x7 = Width, y7 = 0, x8 = 0, y8 = 0;
+        //    System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+        //    y1 = borderRadius / 2;
+        //    x8 = borderRadius / 2;
+        //    y2 = height - (borderRadius / 2);
+        //    x3 = borderRadius / 2;
+        //    x4 = Width - (borderRadius / 2);
+        //    y5 = Height - (borderRadius / 2);
+        //    y6 = borderRadius / 2;
+        //    x7 = Width - (borderRadius / 2);
+        //    // Top Left Arc
+        //    gp.AddArc(new Rectangle(0, 0, borderRadius, borderRadius), 180, 90);
+        //    // Left Border
+        //    gp.AddLine(new Point(x1, y1), new Point(x2, y2));
+        //    // Bottom Left Arc
+        //    gp.AddArc(new Rectangle(0, height - borderRadius, borderRadius, borderRadius), 90, 90);
+        //    // Bottom Line
+        //    gp.AddLine(new Point(x3, y3), new Point(x4, y4));
+        //    // Bottom Right Arc
+        //    gp.AddArc(new Rectangle(width - borderRadius, height - borderRadius, borderRadius, borderRadius), 0, 90);
+        //    // Right Border
+        //    gp.AddLine(new Point(x5, y5), new Point(x6, y6));
+        //    // Top Right Border
+        //    gp.AddArc(width - borderRadius, 0, borderRadius, borderRadius, 270, 90);
+        //    // Top Border
+        //    gp.AddLine(new Point(x7, y7), new Point(x8, y8));
+        //    gp.CloseFigure();
+        //    this.Region = new Region(gp);
+        //}
+
+        //#endregion
+
+        private void GRRInspectionUI_Load(object sender, EventArgs e)
+        {
+            PurchaseOrderID = "101";
+            SetUpdateData("4136");
+            fillControl.fillCombo(acceptanceComboBox, masterManager.GetInspecAcceptanceList("1", null), "Status", "Code");
+            fillControl.fillCombo(remarksComboBox, masterManager.GetInspecAcceptanceList("2", null), "Status", "Code");
+        }
+
+        private void SetUpdateData(string orderNo)
+        {
+            DataTable purchaseOrder;
+            purchaseOrder = purchaseManager.GetPurchaseOrderList("2", orderNo);
+
+            if (purchaseOrder.Rows.Count > 0)
+            {
+                supplierLabel.Text = purchaseOrder.Rows[0]["Supplier"].ToString();
+                purchaseOrderLabel.Text = purchaseOrder.Rows[0]["orderNo"].ToString();
+                purOrdDateLabel.Text = purchaseOrder.Rows[0]["orderDate"].ToString();
+                
+                int n;
+                foreach (DataRow dr in purchaseOrder.Rows)
+                {
+                    //fill the MRR GridView
+                    n = pOrdDataGridView.Rows.Add();
+                    pOrdDataGridView.Rows[n].Cells[1].Value = (n+1).ToString();
+                    pOrdDataGridView.Rows[n].Cells[2].Value = dr["Item"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[3].Value = dr["OrderedQty"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[4].Value = dr["Item"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[5].Value = dr["OrderedQty"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[6].Value = dr["Item"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[7].Value = dr["OrderedQty"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[9].Value = dr["Price"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[10].Value = dr["POrdDetID"].ToString();
+                    pOrdDataGridView.Rows[n].Cells[11].Value = dr["GoodsID"].ToString();
+                }
+            }
+        }
+
+        private void closeLabel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pOrdDataGridView_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //switch (e.ColumnIndex)
+            //{
+            //    case 4:    
+            //        pOrdDataGridView.Rows[e.RowIndex].Cells[4].Value = pOrdDataGridView.Rows[e.RowIndex].Cells[2].Value;
+            //        break;
+            //    case 6:
+            //        pOrdDataGridView.Rows[e.RowIndex].Cells[6].Value = pOrdDataGridView.Rows[e.RowIndex].Cells[2].Value;
+            //        break;                
+                    
+            //}
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if (IsValid())
+            {
+                if (grrManager.GRIManagement(grr))
+                {
+                    ClearAllFields();
+                }
+            }
+        }
+
+        private bool IsValid()
+        {
+            if (string.IsNullOrEmpty(challanTextBox.Text.Trim()))
+            {
+                MessageBox.Show("Enter invoice/challan No.");
+                challanTextBox.Focus();
+                return false;
+            }
+            else if (string.IsNullOrEmpty(acceptanceComboBox.Text.Trim()))
+            {
+                MessageBox.Show("Select accceptance.");
+                acceptanceComboBox.Focus();
+                return false;
+            }
+            //else if (grrDataGridView.Rows.Count <= 0)
+            //{
+            //    MessageBox.Show("Enter GRR items.");
+            //    return false;
+            //}
+            else
+            {
+                SetValues();
+            }
+            return true;
+        }
+
+
+        private void SetValues()
+        {
+            if (grr == null)
+            {
+                grr = new GRR();
+            }
+
+            grr.PurchseOrdID = Convert.ToInt64(PurchaseOrderID);
+            grr.InvoiceNo = challanTextBox.Text.Trim();
+            grr.InvoiceDate = challanDate.Value;
+            grr.Acceptance = Convert.ToByte(acceptanceComboBox.SelectedValue.ToString());
+            grr.Comments = commentsTextBox.Text.Trim();            
+
+            foreach (DataGridViewRow gridItem in pOrdDataGridView.Rows)
+            {
+                if (gridItem.Cells[1].Value != null)
+                {
+                    if (gridItem.Cells[1].Value != null && !string.IsNullOrEmpty(gridItem.Cells[1].Value.ToString()))
+                    {
+                        Product grrProduct = new Product();
+                        grrProduct.PID = gridItem.Cells[10].Value.ToString();
+                        grrProduct.PCode = gridItem.Cells[11].Value.ToString();
+                        grrProduct.Pname = gridItem.Cells[4].Value.ToString().Trim();                        
+                        grrProduct.QtyBoforeInspec = Convert.ToByte(gridItem.Cells[5].Value.ToString());
+                        grrProduct.QtyAfterInspec = Convert.ToByte(gridItem.Cells[7].Value.ToString());
+                        grrProduct.InspecRemarks = Convert.ToByte(gridItem.Cells[12].Value.ToString());
+
+                        if (IsEdit && (gridItem.Cells[10].Value != null && !string.IsNullOrEmpty(gridItem.Cells[10].Value.ToString())))
+                        {
+                            //update the item
+                            grrProduct.Condition = "2";
+                            grrProduct.PID = gridItem.Cells[10].Value.ToString();
+                            grr.Products.Add(grrProduct);
+                        }
+                        else
+                        {
+                            //new item 
+                            grrProduct.Condition = "1";
+                            grr.Products.Add(grrProduct);
+                        }
+                    }
+
+                }
+            }
+            if (IsEdit)
+            {
+                grr.Condition = "2";
+            }
+        }
+
+        private void ClearAllFields()
+        {
+
+        }
+
+        private void pOrdDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ShowCombobox(e);
+        }
+            
+        private void ShowCombobox(DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (pOrdDataGridView.CurrentCell != null)
+                {
+                    if (e.ColumnIndex == 8)
+                    {
+                        Point cellLocation = this.pOrdDataGridView.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true).Location;
+                        this.remarksComboBox.Location = new Point(cellLocation.X, cellLocation.Y + 5);
+
+                        if (string.IsNullOrEmpty((string)pOrdDataGridView.CurrentCell.Value))
+                        {
+                            remarksComboBox.SelectedIndex = -1;
+                        }
+                        else
+                        {
+                            remarksComboBox.SelectedItem = pOrdDataGridView.CurrentCell.Value;
+                        }
+                        this.remarksComboBox.Show();
+                    }
+                    else
+                    {
+                        this.remarksComboBox.Hide();
+                    }
+                }
+            }
+            catch 
+            {
+                remarksComboBox.Hide();
+            }
+        }
+
+            private void remarksComboBox_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                if (remarksComboBox.SelectedIndex > -1)
+                {
+                    if (pOrdDataGridView.CurrentRow != null)
+                    {
+                        pOrdDataGridView.CurrentRow.Cells[8].Value = remarksComboBox.Text;
+                        pOrdDataGridView.CurrentRow.Cells[12].Value = remarksComboBox.SelectedValue.ToString();
+                        remarksComboBox.Hide();                        
+                    }
+                }
+            }
+        
+
+        
+    }
+}

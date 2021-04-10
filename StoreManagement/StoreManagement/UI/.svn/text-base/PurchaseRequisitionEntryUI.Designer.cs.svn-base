@@ -1,0 +1,536 @@
+﻿namespace StoreManagement.UI
+{
+    partial class PurchaseRequisitionEntryUI
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.storeReqDataGridView = new System.Windows.Forms.DataGridView();
+            this.ColumnSlno = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnModel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnOrdered = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnQtyBfrInsp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timePeriodComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.quarterRadioButton = new System.Windows.Forms.RadioButton();
+            this.tripleRadioButton = new System.Windows.Forms.RadioButton();
+            this.doubleRadioButton = new System.Windows.Forms.RadioButton();
+            this.singleRadioButton = new System.Windows.Forms.RadioButton();
+            this.yearTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.sCategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.unitComboBox = new System.Windows.Forms.ComboBox();
+            this.infoPanel.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.storeReqDataGridView)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // infoPanel
+            // 
+            this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.infoPanel.Controls.Add(this.groupBox6);
+            this.infoPanel.Controls.Add(this.groupBox5);
+            this.infoPanel.Controls.Add(this.groupBox2);
+            this.infoPanel.Controls.Add(this.label14);
+            this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPanel.Location = new System.Drawing.Point(0, 0);
+            this.infoPanel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(689, 515);
+            this.infoPanel.TabIndex = 15;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.storeReqDataGridView);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox6.Location = new System.Drawing.Point(0, 166);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(689, 298);
+            this.groupBox6.TabIndex = 243;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Stock List";
+            // 
+            // storeReqDataGridView
+            // 
+            this.storeReqDataGridView.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(188)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(188)))), ((int)(((byte)(197)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.storeReqDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.storeReqDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.storeReqDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(192)))), ((int)(((byte)(196)))));
+            this.storeReqDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(133)))), ((int)(((byte)(141)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.storeReqDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.storeReqDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.storeReqDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnSlno,
+            this.ColumnDescription,
+            this.ColumnModel,
+            this.ColumnUnit,
+            this.ColumnOrdered,
+            this.ColumnQtyBfrInsp,
+            this.ColumnRemarks,
+            this.code,
+            this.ID});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.storeReqDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            this.storeReqDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.storeReqDataGridView.EnableHeadersVisualStyles = false;
+            this.storeReqDataGridView.Location = new System.Drawing.Point(3, 17);
+            this.storeReqDataGridView.Name = "storeReqDataGridView";
+            this.storeReqDataGridView.RowHeadersVisible = false;
+            this.storeReqDataGridView.Size = new System.Drawing.Size(683, 278);
+            this.storeReqDataGridView.TabIndex = 234;
+            // 
+            // ColumnSlno
+            // 
+            this.ColumnSlno.HeaderText = "";
+            this.ColumnSlno.Name = "ColumnSlno";
+            this.ColumnSlno.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnSlno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColumnSlno.Width = 20;
+            // 
+            // ColumnDescription
+            // 
+            this.ColumnDescription.HeaderText = "Name of the item";
+            this.ColumnDescription.Name = "ColumnDescription";
+            this.ColumnDescription.ReadOnly = true;
+            this.ColumnDescription.Width = 240;
+            // 
+            // ColumnModel
+            // 
+            this.ColumnModel.HeaderText = "Model No";
+            this.ColumnModel.Name = "ColumnModel";
+            this.ColumnModel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ColumnUnit
+            // 
+            this.ColumnUnit.HeaderText = "Unit";
+            this.ColumnUnit.Name = "ColumnUnit";
+            this.ColumnUnit.ReadOnly = true;
+            this.ColumnUnit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnUnit.Width = 50;
+            // 
+            // ColumnOrdered
+            // 
+            this.ColumnOrdered.HeaderText = "Stock";
+            this.ColumnOrdered.Name = "ColumnOrdered";
+            this.ColumnOrdered.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnOrdered.Width = 50;
+            // 
+            // ColumnQtyBfrInsp
+            // 
+            this.ColumnQtyBfrInsp.HeaderText = "Required";
+            this.ColumnQtyBfrInsp.Name = "ColumnQtyBfrInsp";
+            this.ColumnQtyBfrInsp.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnQtyBfrInsp.Width = 60;
+            // 
+            // ColumnRemarks
+            // 
+            this.ColumnRemarks.HeaderText = "User Dept.";
+            this.ColumnRemarks.Name = "ColumnRemarks";
+            this.ColumnRemarks.Width = 160;
+            // 
+            // code
+            // 
+            this.code.HeaderText = "";
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
+            this.code.Visible = false;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.panel2);
+            this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox5.Location = new System.Drawing.Point(0, 464);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(689, 51);
+            this.groupBox5.TabIndex = 242;
+            this.groupBox5.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.clearButton);
+            this.panel2.Controls.Add(this.closeButton);
+            this.panel2.Controls.Add(this.saveButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(456, 16);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(230, 32);
+            this.panel2.TabIndex = 239;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(75, 4);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(60, 23);
+            this.clearButton.TabIndex = 7;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(141, 4);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(60, 23);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.Location = new System.Drawing.Point(7, 4);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(62, 23);
+            this.saveButton.TabIndex = 6;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.unitComboBox);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.timePeriodComboBox);
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Controls.Add(this.yearTextBox);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.sCategoryComboBox);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(0, 24);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(689, 142);
+            this.groupBox2.TabIndex = 240;
+            this.groupBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 89);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 21);
+            this.label1.TabIndex = 255;
+            this.label1.Text = "Year";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // timePeriodComboBox
+            // 
+            this.timePeriodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.timePeriodComboBox.FormattingEnabled = true;
+            this.timePeriodComboBox.Location = new System.Drawing.Point(119, 66);
+            this.timePeriodComboBox.Name = "timePeriodComboBox";
+            this.timePeriodComboBox.Size = new System.Drawing.Size(281, 21);
+            this.timePeriodComboBox.TabIndex = 254;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.groupBox4);
+            this.groupBox3.Controls.Add(this.quarterRadioButton);
+            this.groupBox3.Controls.Add(this.tripleRadioButton);
+            this.groupBox3.Controls.Add(this.doubleRadioButton);
+            this.groupBox3.Controls.Add(this.singleRadioButton);
+            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Yellow;
+            this.groupBox3.Location = new System.Drawing.Point(406, 13);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(273, 136);
+            this.groupBox3.TabIndex = 252;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Requisition Month";
+            this.groupBox3.Visible = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(16, 76);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(296, 42);
+            this.groupBox4.TabIndex = 254;
+            this.groupBox4.TabStop = false;
+            // 
+            // quarterRadioButton
+            // 
+            this.quarterRadioButton.AutoSize = true;
+            this.quarterRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.quarterRadioButton.Location = new System.Drawing.Point(218, 53);
+            this.quarterRadioButton.Name = "quarterRadioButton";
+            this.quarterRadioButton.Size = new System.Drawing.Size(69, 17);
+            this.quarterRadioButton.TabIndex = 3;
+            this.quarterRadioButton.TabStop = true;
+            this.quarterRadioButton.Text = "Quarter";
+            this.quarterRadioButton.UseVisualStyleBackColor = true;
+            this.quarterRadioButton.Click += new System.EventHandler(this.quarterRadioButton_Click);
+            // 
+            // tripleRadioButton
+            // 
+            this.tripleRadioButton.AutoSize = true;
+            this.tripleRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.tripleRadioButton.Location = new System.Drawing.Point(16, 53);
+            this.tripleRadioButton.Name = "tripleRadioButton";
+            this.tripleRadioButton.Size = new System.Drawing.Size(57, 17);
+            this.tripleRadioButton.TabIndex = 2;
+            this.tripleRadioButton.TabStop = true;
+            this.tripleRadioButton.Text = "Triple";
+            this.tripleRadioButton.UseVisualStyleBackColor = true;
+            this.tripleRadioButton.Click += new System.EventHandler(this.tripleRadioButton_Click);
+            // 
+            // doubleRadioButton
+            // 
+            this.doubleRadioButton.AutoSize = true;
+            this.doubleRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.doubleRadioButton.Location = new System.Drawing.Point(218, 24);
+            this.doubleRadioButton.Name = "doubleRadioButton";
+            this.doubleRadioButton.Size = new System.Drawing.Size(64, 17);
+            this.doubleRadioButton.TabIndex = 1;
+            this.doubleRadioButton.TabStop = true;
+            this.doubleRadioButton.Text = "Double";
+            this.doubleRadioButton.UseVisualStyleBackColor = true;
+            this.doubleRadioButton.Click += new System.EventHandler(this.doubleRadioButton_Click);
+            // 
+            // singleRadioButton
+            // 
+            this.singleRadioButton.AutoSize = true;
+            this.singleRadioButton.ForeColor = System.Drawing.Color.Black;
+            this.singleRadioButton.Location = new System.Drawing.Point(16, 27);
+            this.singleRadioButton.Name = "singleRadioButton";
+            this.singleRadioButton.Size = new System.Drawing.Size(59, 17);
+            this.singleRadioButton.TabIndex = 0;
+            this.singleRadioButton.TabStop = true;
+            this.singleRadioButton.Text = "Single";
+            this.singleRadioButton.UseVisualStyleBackColor = true;
+            this.singleRadioButton.Click += new System.EventHandler(this.singleRadioButton_Click);
+            // 
+            // yearTextBox
+            // 
+            this.yearTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.yearTextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.yearTextBox.Location = new System.Drawing.Point(119, 93);
+            this.yearTextBox.Name = "yearTextBox";
+            this.yearTextBox.Size = new System.Drawing.Size(91, 21);
+            this.yearTextBox.TabIndex = 250;
+            this.yearTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yearTextBox_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(12, 64);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 21);
+            this.label13.TabIndex = 251;
+            this.label13.Text = "Month";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // sCategoryComboBox
+            // 
+            this.sCategoryComboBox.FormattingEnabled = true;
+            this.sCategoryComboBox.Location = new System.Drawing.Point(119, 39);
+            this.sCategoryComboBox.Name = "sCategoryComboBox";
+            this.sCategoryComboBox.Size = new System.Drawing.Size(281, 21);
+            this.sCategoryComboBox.TabIndex = 249;
+            this.sCategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.sCategoryComboBox_SelectedIndexChanged);
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(12, 34);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(105, 26);
+            this.label18.TabIndex = 248;
+            this.label18.Text = "Stationary Category";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(689, 24);
+            this.label14.TabIndex = 233;
+            this.label14.Text = "Purchase Requisition";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(216, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 21);
+            this.label2.TabIndex = 257;
+            this.label2.Text = "Unit";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // unitComboBox
+            // 
+            this.unitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.unitComboBox.FormattingEnabled = true;
+            this.unitComboBox.Location = new System.Drawing.Point(254, 93);
+            this.unitComboBox.Name = "unitComboBox";
+            this.unitComboBox.Size = new System.Drawing.Size(146, 21);
+            this.unitComboBox.TabIndex = 258;
+            // 
+            // PurchaseRequisitionEntryUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(689, 515);
+            this.Controls.Add(this.infoPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(697, 541);
+            this.Name = "PurchaseRequisitionEntryUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Purchase Requisition";
+            this.Load += new System.EventHandler(this.PurchaseRequisitionUI_Load);
+            this.infoPanel.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.storeReqDataGridView)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox yearTextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox sCategoryComboBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RadioButton quarterRadioButton;
+        private System.Windows.Forms.RadioButton tripleRadioButton;
+        private System.Windows.Forms.RadioButton doubleRadioButton;
+        private System.Windows.Forms.RadioButton singleRadioButton;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridView storeReqDataGridView;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSlno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnModel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnUnit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnOrdered;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnQtyBfrInsp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRemarks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox timePeriodComboBox;
+        private System.Windows.Forms.ComboBox unitComboBox;
+        private System.Windows.Forms.Label label2;
+    }
+}

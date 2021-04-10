@@ -1,0 +1,573 @@
+﻿namespace StoreManagement.UI
+{
+    partial class GRREntryUI
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.infoPanel = new System.Windows.Forms.Panel();
+            this.menufacturerLabel = new System.Windows.Forms.Label();
+            this.supplierLabel = new System.Windows.Forms.Label();
+            this.grrNoLabel = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grrListView = new System.Windows.Forms.ListView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.grrDate = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.challanDateLabel = new System.Windows.Forms.Label();
+            this.challanNoLabel = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cepNoLabel = new System.Windows.Forms.Label();
+            this.pOrderLabel = new System.Windows.Forms.Label();
+            this.cepDateLabel = new System.Windows.Forms.Label();
+            this.poDateLabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cCenterCodeTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.infoPanel.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // infoPanel
+            // 
+            this.infoPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.infoPanel.Controls.Add(this.label1);
+            this.infoPanel.Controls.Add(this.menufacturerLabel);
+            this.infoPanel.Controls.Add(this.supplierLabel);
+            this.infoPanel.Controls.Add(this.grrNoLabel);
+            this.infoPanel.Controls.Add(this.groupBox4);
+            this.infoPanel.Controls.Add(this.panel2);
+            this.infoPanel.Controls.Add(this.grrDate);
+            this.infoPanel.Controls.Add(this.label14);
+            this.infoPanel.Controls.Add(this.label6);
+            this.infoPanel.Controls.Add(this.label5);
+            this.infoPanel.Controls.Add(this.groupBox3);
+            this.infoPanel.Controls.Add(this.groupBox1);
+            this.infoPanel.Controls.Add(this.cCenterCodeTextBox);
+            this.infoPanel.Controls.Add(this.label9);
+            this.infoPanel.Controls.Add(this.label3);
+            this.infoPanel.Controls.Add(this.label4);
+            this.infoPanel.Controls.Add(this.label2);
+            this.infoPanel.Controls.Add(this.label18);
+            this.infoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.infoPanel.Location = new System.Drawing.Point(0, 0);
+            this.infoPanel.Margin = new System.Windows.Forms.Padding(3, 20, 3, 3);
+            this.infoPanel.Name = "infoPanel";
+            this.infoPanel.Size = new System.Drawing.Size(665, 548);
+            this.infoPanel.TabIndex = 14;
+            // 
+            // menufacturerLabel
+            // 
+            this.menufacturerLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.menufacturerLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menufacturerLabel.ForeColor = System.Drawing.Color.White;
+            this.menufacturerLabel.Location = new System.Drawing.Point(104, 173);
+            this.menufacturerLabel.Name = "menufacturerLabel";
+            this.menufacturerLabel.Size = new System.Drawing.Size(208, 35);
+            this.menufacturerLabel.TabIndex = 245;
+            this.menufacturerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // supplierLabel
+            // 
+            this.supplierLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.supplierLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierLabel.ForeColor = System.Drawing.Color.White;
+            this.supplierLabel.Location = new System.Drawing.Point(89, 135);
+            this.supplierLabel.Name = "supplierLabel";
+            this.supplierLabel.Size = new System.Drawing.Size(223, 36);
+            this.supplierLabel.TabIndex = 244;
+            this.supplierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // grrNoLabel
+            // 
+            this.grrNoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.grrNoLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grrNoLabel.ForeColor = System.Drawing.Color.White;
+            this.grrNoLabel.Location = new System.Drawing.Point(543, 68);
+            this.grrNoLabel.Name = "grrNoLabel";
+            this.grrNoLabel.Size = new System.Drawing.Size(89, 21);
+            this.grrNoLabel.TabIndex = 243;
+            this.grrNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.grrListView);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox4.Location = new System.Drawing.Point(0, 272);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(665, 235);
+            this.groupBox4.TabIndex = 239;
+            this.groupBox4.TabStop = false;
+            // 
+            // grrListView
+            // 
+            this.grrListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grrListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grrListView.GridLines = true;
+            this.grrListView.Location = new System.Drawing.Point(3, 16);
+            this.grrListView.Name = "grrListView";
+            this.grrListView.Size = new System.Drawing.Size(659, 216);
+            this.grrListView.TabIndex = 0;
+            this.grrListView.UseCompatibleStateImageBehavior = false;
+            this.grrListView.View = System.Windows.Forms.View.Details;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.clearButton);
+            this.panel2.Controls.Add(this.closeButton);
+            this.panel2.Controls.Add(this.saveButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 507);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(665, 41);
+            this.panel2.TabIndex = 238;
+            // 
+            // clearButton
+            // 
+            this.clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
+            this.clearButton.FlatAppearance.BorderSize = 0;
+            this.clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearButton.ForeColor = System.Drawing.Color.White;
+            this.clearButton.Location = new System.Drawing.Point(529, 9);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(60, 23);
+            this.clearButton.TabIndex = 7;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(595, 9);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(60, 23);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(71)))), ((int)(((byte)(97)))));
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.ForeColor = System.Drawing.Color.White;
+            this.saveButton.Location = new System.Drawing.Point(461, 9);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(62, 23);
+            this.saveButton.TabIndex = 6;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // grrDate
+            // 
+            this.grrDate.CustomFormat = "dd/MM/yyyy";
+            this.grrDate.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grrDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.grrDate.Location = new System.Drawing.Point(543, 95);
+            this.grrDate.Name = "grrDate";
+            this.grrDate.Size = new System.Drawing.Size(89, 21);
+            this.grrDate.TabIndex = 235;
+            this.grrDate.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(15, 81);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(234, 23);
+            this.label14.TabIndex = 233;
+            this.label14.Text = "Goods Receiving ";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(12, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(219, 13);
+            this.label6.TabIndex = 232;
+            this.label6.Text = "17, Dhanmondi R/A Road No.2, Dhaka-1205";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(12, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(274, 25);
+            this.label5.TabIndex = 231;
+            this.label5.Text = "Baximco Chemical Division\r\n";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.challanDateLabel);
+            this.groupBox3.Controls.Add(this.challanNoLabel);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Location = new System.Drawing.Point(32, 209);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(363, 41);
+            this.groupBox3.TabIndex = 229;
+            this.groupBox3.TabStop = false;
+            // 
+            // challanDateLabel
+            // 
+            this.challanDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.challanDateLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.challanDateLabel.ForeColor = System.Drawing.Color.White;
+            this.challanDateLabel.Location = new System.Drawing.Point(268, 12);
+            this.challanDateLabel.Name = "challanDateLabel";
+            this.challanDateLabel.Size = new System.Drawing.Size(85, 21);
+            this.challanDateLabel.TabIndex = 248;
+            this.challanDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // challanNoLabel
+            // 
+            this.challanNoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.challanNoLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.challanNoLabel.ForeColor = System.Drawing.Color.White;
+            this.challanNoLabel.Location = new System.Drawing.Point(116, 12);
+            this.challanNoLabel.Name = "challanNoLabel";
+            this.challanNoLabel.Size = new System.Drawing.Size(107, 21);
+            this.challanNoLabel.TabIndex = 247;
+            this.challanNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(229, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 25);
+            this.label7.TabIndex = 226;
+            this.label7.Text = "Date";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(8, 12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 25);
+            this.label10.TabIndex = 224;
+            this.label10.Text = "Invoice/ Challan No.";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cepNoLabel);
+            this.groupBox1.Controls.Add(this.pOrderLabel);
+            this.groupBox1.Controls.Add(this.cepDateLabel);
+            this.groupBox1.Controls.Add(this.poDateLabel);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Location = new System.Drawing.Point(318, 130);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(312, 70);
+            this.groupBox1.TabIndex = 227;
+            this.groupBox1.TabStop = false;
+            // 
+            // cepNoLabel
+            // 
+            this.cepNoLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.cepNoLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cepNoLabel.ForeColor = System.Drawing.Color.White;
+            this.cepNoLabel.Location = new System.Drawing.Point(67, 42);
+            this.cepNoLabel.Name = "cepNoLabel";
+            this.cepNoLabel.Size = new System.Drawing.Size(96, 21);
+            this.cepNoLabel.TabIndex = 245;
+            this.cepNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pOrderLabel
+            // 
+            this.pOrderLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.pOrderLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pOrderLabel.ForeColor = System.Drawing.Color.White;
+            this.pOrderLabel.Location = new System.Drawing.Point(67, 13);
+            this.pOrderLabel.Name = "pOrderLabel";
+            this.pOrderLabel.Size = new System.Drawing.Size(96, 21);
+            this.pOrderLabel.TabIndex = 244;
+            this.pOrderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cepDateLabel
+            // 
+            this.cepDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.cepDateLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cepDateLabel.ForeColor = System.Drawing.Color.White;
+            this.cepDateLabel.Location = new System.Drawing.Point(208, 42);
+            this.cepDateLabel.Name = "cepDateLabel";
+            this.cepDateLabel.Size = new System.Drawing.Size(96, 21);
+            this.cepDateLabel.TabIndex = 243;
+            this.cepDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // poDateLabel
+            // 
+            this.poDateLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(122)))), ((int)(((byte)(130)))));
+            this.poDateLabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.poDateLabel.ForeColor = System.Drawing.Color.White;
+            this.poDateLabel.Location = new System.Drawing.Point(208, 13);
+            this.poDateLabel.Name = "poDateLabel";
+            this.poDateLabel.Size = new System.Drawing.Size(96, 21);
+            this.poDateLabel.TabIndex = 242;
+            this.poDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(170, 41);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(33, 21);
+            this.label12.TabIndex = 238;
+            this.label12.Text = "Date";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(10, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 21);
+            this.label13.TabIndex = 237;
+            this.label13.Text = "CEP No.";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(170, 12);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(33, 25);
+            this.label11.TabIndex = 226;
+            this.label11.Text = "Date";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(10, 13);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 21);
+            this.label8.TabIndex = 224;
+            this.label8.Text = "P.O. NO.";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cCenterCodeTextBox
+            // 
+            this.cCenterCodeTextBox.BackColor = System.Drawing.Color.White;
+            this.cCenterCodeTextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cCenterCodeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cCenterCodeTextBox.Location = new System.Drawing.Point(511, 223);
+            this.cCenterCodeTextBox.Name = "cCenterCodeTextBox";
+            this.cCenterCodeTextBox.Size = new System.Drawing.Size(108, 21);
+            this.cCenterCodeTextBox.TabIndex = 225;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(448, 219);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 26);
+            this.label9.TabIndex = 226;
+            this.label9.Text = "Cost center Code";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(31, 174);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 19);
+            this.label3.TabIndex = 212;
+            this.label3.Text = "Manufacturer";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(31, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.TabIndex = 210;
+            this.label4.Text = "Supplier(s)";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(488, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 26);
+            this.label2.TabIndex = 208;
+            this.label2.Text = "Date";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(161)))), ((int)(((byte)(169)))));
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(488, 64);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(51, 25);
+            this.label18.TabIndex = 129;
+            this.label18.Text = "GRR NO.";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(133)))), ((int)(((byte)(141)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(665, 27);
+            this.label1.TabIndex = 246;
+            this.label1.Text = "    Good Receiving";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GRREntryUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(665, 548);
+            this.Controls.Add(this.infoPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.Name = "GRREntryUI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "GRR Entry";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GRREntryUI_Load);
+            this.infoPanel.ResumeLayout(false);
+            this.infoPanel.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel infoPanel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox cCenterCodeTextBox;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker grrDate;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button closeButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Label menufacturerLabel;
+        private System.Windows.Forms.Label supplierLabel;
+        private System.Windows.Forms.Label grrNoLabel;
+        private System.Windows.Forms.Label cepNoLabel;
+        private System.Windows.Forms.Label pOrderLabel;
+        private System.Windows.Forms.Label cepDateLabel;
+        private System.Windows.Forms.Label poDateLabel;
+        private System.Windows.Forms.ListView grrListView;
+        private System.Windows.Forms.Label challanDateLabel;
+        private System.Windows.Forms.Label challanNoLabel;
+        private System.Windows.Forms.Label label1;
+    }
+}

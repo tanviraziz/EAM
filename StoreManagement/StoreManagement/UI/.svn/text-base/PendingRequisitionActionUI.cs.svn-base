@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using StoreManagement.BLL;
+using StoreManagement.DAL.DAO;
+using StoreManagement.UTILITY;
+
+namespace StoreManagement.UI
+{
+    public partial class PendingRequisitionActionUI : Form
+    {
+        #region Veriables
+            private DynamicControlFill fillControll = null;
+        #endregion
+
+        public PendingRequisitionActionUI()
+        {
+            InitializeComponent();
+            SetObjects();
+        }
+
+        private void SetObjects()
+        {
+            fillControll = new DynamicControlFill();
+        }
+
+        private void PendingRequisitionListUI_Load(object sender, EventArgs e)
+        {
+            taskPane1.UseCustomTheme(fillControll.GetAppPath() + @"\CustomeStyle\shellstyle.dll");
+        }
+    }
+}

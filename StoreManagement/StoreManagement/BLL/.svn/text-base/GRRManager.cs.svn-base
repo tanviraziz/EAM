@@ -1,0 +1,71 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using StoreManagement.DAL.DAO;
+using StoreManagement.DAL.GATEWAY;
+
+namespace StoreManagement.BLL
+{
+    class GRRManager
+    {
+        private GRRGateway grrGateway = null;
+        public GRRManager()
+        {
+            grrGateway = new GRRGateway();
+        }
+
+        #region GRR Managememt
+
+        //Insert, Update and delete GRR Inspection
+        public bool GRIManagement(GRR grr)
+        {
+            return grrGateway.GrIManagement(grr);
+        }
+
+        //Insert, Update and delete GRR in stock
+        public bool GrrToStock(GRR grr)
+        {
+            return grrGateway.GrrToStock(grr);
+        }
+
+        //return theGRR list in a datatable
+        public DataTable GetOrderInspeectionList(string choice, string condition)
+        {
+            try
+            {
+                DataTable dt = grrGateway.OrderInspectionList(choice, condition);
+                if (dt != null)
+                {
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
+
+        //return theGRR list in a datatable
+        public DataTable GetGRRList(string choice, string condition)
+        {
+            try
+            {
+                DataTable dt = grrGateway.GrrList(choice, condition);
+                if (dt != null)
+                {
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
+
+        #endregion
+    }
+}

@@ -1,0 +1,277 @@
+﻿namespace StoreManagement.UI
+{
+    partial class ManagemetnDashBoardActionUI
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.taskPane1 = new XPExplorerBar.TaskPane();
+            this.expando1 = new XPExplorerBar.Expando();
+            this.xpListView1 = new XPExplorerBar.XPListView();
+            this.expando2 = new XPExplorerBar.Expando();
+            this.xpListView2 = new XPExplorerBar.XPListView();
+            this.expando3 = new XPExplorerBar.Expando();
+            this.xpListView3 = new XPExplorerBar.XPListView();
+            this.expando4 = new XPExplorerBar.Expando();
+            this.xpListView4 = new XPExplorerBar.XPListView();
+            this.expando5 = new XPExplorerBar.Expando();
+            this.xpListView5 = new XPExplorerBar.XPListView();
+            this.expando6 = new XPExplorerBar.Expando();
+            this.xpListView6 = new XPExplorerBar.XPListView();
+            ((System.ComponentModel.ISupportInitialize)(this.taskPane1)).BeginInit();
+            this.taskPane1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando1)).BeginInit();
+            this.expando1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando2)).BeginInit();
+            this.expando2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando3)).BeginInit();
+            this.expando3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando4)).BeginInit();
+            this.expando4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando5)).BeginInit();
+            this.expando5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando6)).BeginInit();
+            this.expando6.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // taskPane1
+            // 
+            this.taskPane1.AutoScrollMargin = new System.Drawing.Size(12, 12);
+            this.taskPane1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taskPane1.Expandos.AddRange(new XPExplorerBar.Expando[] {
+            this.expando1,
+            this.expando2,
+            this.expando3,
+            this.expando4,
+            this.expando5,
+            this.expando6});
+            this.taskPane1.Location = new System.Drawing.Point(0, 0);
+            this.taskPane1.Name = "taskPane1";
+            this.taskPane1.Size = new System.Drawing.Size(535, 588);
+            this.taskPane1.TabIndex = 1;
+            this.taskPane1.Text = "taskPane1";
+            // 
+            // expando1
+            // 
+            this.expando1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando1.Animate = true;
+            this.expando1.Collapsed = true;
+            this.expando1.ExpandedHeight = 150;
+            this.expando1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando1.Items.AddRange(new System.Windows.Forms.Control[] {
+            this.xpListView1});
+            this.expando1.Location = new System.Drawing.Point(12, 12);
+            this.expando1.Name = "expando1";
+            this.expando1.Size = new System.Drawing.Size(511, 23);
+            this.expando1.TabIndex = 0;
+            this.expando1.Text = "Purchase Requisitions";
+            // 
+            // xpListView1
+            // 
+            this.xpListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.xpListView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpListView1.Location = new System.Drawing.Point(1, 23);
+            this.xpListView1.Name = "xpListView1";
+            this.xpListView1.Size = new System.Drawing.Size(509, 126);
+            this.xpListView1.TabIndex = 0;
+            this.xpListView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // expando2
+            // 
+            this.expando2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando2.Animate = true;
+            this.expando2.Collapsed = true;
+            this.expando2.ExpandedHeight = 150;
+            this.expando2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando2.Items.AddRange(new System.Windows.Forms.Control[] {
+            this.xpListView2});
+            this.expando2.Location = new System.Drawing.Point(12, 47);
+            this.expando2.Name = "expando2";
+            this.expando2.Size = new System.Drawing.Size(511, 23);
+            this.expando2.TabIndex = 1;
+            this.expando2.Text = "GRRs";
+            // 
+            // xpListView2
+            // 
+            this.xpListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.xpListView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpListView2.Location = new System.Drawing.Point(1, 23);
+            this.xpListView2.Name = "xpListView2";
+            this.xpListView2.Size = new System.Drawing.Size(509, 126);
+            this.xpListView2.TabIndex = 1;
+            this.xpListView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // expando3
+            // 
+            this.expando3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando3.Animate = true;
+            this.expando3.Collapsed = true;
+            this.expando3.ExpandedHeight = 150;
+            this.expando3.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando3.Items.AddRange(new System.Windows.Forms.Control[] {
+            this.xpListView3});
+            this.expando3.Location = new System.Drawing.Point(12, 82);
+            this.expando3.Name = "expando3";
+            this.expando3.Size = new System.Drawing.Size(511, 23);
+            this.expando3.TabIndex = 2;
+            this.expando3.Text = "Store Requisiton";
+            // 
+            // xpListView3
+            // 
+            this.xpListView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.xpListView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpListView3.Location = new System.Drawing.Point(1, 23);
+            this.xpListView3.Name = "xpListView3";
+            this.xpListView3.Size = new System.Drawing.Size(509, 126);
+            this.xpListView3.TabIndex = 1;
+            this.xpListView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // expando4
+            // 
+            this.expando4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando4.Animate = true;
+            this.expando4.Collapsed = true;
+            this.expando4.ExpandedHeight = 150;
+            this.expando4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando4.Items.AddRange(new System.Windows.Forms.Control[] {
+            this.xpListView4});
+            this.expando4.Location = new System.Drawing.Point(12, 117);
+            this.expando4.Name = "expando4";
+            this.expando4.Size = new System.Drawing.Size(511, 23);
+            this.expando4.TabIndex = 3;
+            this.expando4.Text = "Mothly Stock";
+            // 
+            // xpListView4
+            // 
+            this.xpListView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.xpListView4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpListView4.Location = new System.Drawing.Point(1, 23);
+            this.xpListView4.Name = "xpListView4";
+            this.xpListView4.Size = new System.Drawing.Size(509, 126);
+            this.xpListView4.TabIndex = 0;
+            this.xpListView4.UseCompatibleStateImageBehavior = false;
+            // 
+            // expando5
+            // 
+            this.expando5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando5.Animate = true;
+            this.expando5.Collapsed = true;
+            this.expando5.ExpandedHeight = 150;
+            this.expando5.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando5.Items.AddRange(new System.Windows.Forms.Control[] {
+            this.xpListView5});
+            this.expando5.Location = new System.Drawing.Point(12, 152);
+            this.expando5.Name = "expando5";
+            this.expando5.Size = new System.Drawing.Size(511, 23);
+            this.expando5.TabIndex = 4;
+            this.expando5.Text = "Final Statement";
+            // 
+            // xpListView5
+            // 
+            this.xpListView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.xpListView5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpListView5.Location = new System.Drawing.Point(1, 23);
+            this.xpListView5.Name = "xpListView5";
+            this.xpListView5.Size = new System.Drawing.Size(509, 126);
+            this.xpListView5.TabIndex = 1;
+            this.xpListView5.UseCompatibleStateImageBehavior = false;
+            // 
+            // expando6
+            // 
+            this.expando6.AllowDrop = true;
+            this.expando6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando6.Animate = true;
+            this.expando6.Collapsed = true;
+            this.expando6.ExpandedHeight = 150;
+            this.expando6.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando6.Items.AddRange(new System.Windows.Forms.Control[] {
+            this.xpListView6});
+            this.expando6.Location = new System.Drawing.Point(12, 187);
+            this.expando6.Name = "expando6";
+            this.expando6.Size = new System.Drawing.Size(511, 23);
+            this.expando6.TabIndex = 5;
+            this.expando6.Text = "BPL Consumption";
+            // 
+            // xpListView6
+            // 
+            this.xpListView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.xpListView6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xpListView6.Location = new System.Drawing.Point(1, 23);
+            this.xpListView6.Name = "xpListView6";
+            this.xpListView6.Size = new System.Drawing.Size(509, 51);
+            this.xpListView6.TabIndex = 1;
+            this.xpListView6.UseCompatibleStateImageBehavior = false;
+            // 
+            // ManagemetnDashBoardUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(535, 588);
+            this.Controls.Add(this.taskPane1);
+            this.Name = "ManagemetnDashBoardUI";
+            this.Text = "Managemetn DashBoard";
+            this.Load += new System.EventHandler(this.ManagemetnDashBoardUI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.taskPane1)).EndInit();
+            this.taskPane1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando1)).EndInit();
+            this.expando1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando2)).EndInit();
+            this.expando2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando3)).EndInit();
+            this.expando3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando4)).EndInit();
+            this.expando4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando5)).EndInit();
+            this.expando5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando6)).EndInit();
+            this.expando6.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private XPExplorerBar.TaskPane taskPane1;
+        private XPExplorerBar.Expando expando1;
+        private XPExplorerBar.XPListView xpListView1;
+        private XPExplorerBar.Expando expando2;
+        private XPExplorerBar.XPListView xpListView2;
+        private XPExplorerBar.Expando expando3;
+        private XPExplorerBar.XPListView xpListView3;
+        private XPExplorerBar.Expando expando4;
+        private XPExplorerBar.XPListView xpListView4;
+        private XPExplorerBar.Expando expando5;
+        private XPExplorerBar.XPListView xpListView5;
+        private XPExplorerBar.Expando expando6;
+        private XPExplorerBar.XPListView xpListView6;
+    }
+}

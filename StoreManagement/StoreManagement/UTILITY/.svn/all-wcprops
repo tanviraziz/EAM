@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY
+END
+MultilineComboBox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/MultilineComboBox.cs
+END
+DynamicControlFill.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/DynamicControlFill.cs
+END
+SendMail.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/SendMail.cs
+END
+EmailValidator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/EmailValidator.cs
+END
+AutoCompleteTextBox.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/AutoCompleteTextBox.cs
+END
+MenuStripCustomization.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/MenuStripCustomization.cs
+END
+Verification.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/Verification.cs
+END
+SpellAmount.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UTILITY/SpellAmount.cs
+END

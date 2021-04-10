@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm
+END
+DrawUtil.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/DrawUtil.cs
+END
+FormStyleEditor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormStyleEditor.cs
+END
+FormStyleEditorControl.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormStyleEditorControl.Designer.cs
+END
+CustomBorderForm.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/CustomBorderForm.cs
+END
+CustomBorderOfForm.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/CustomBorderOfForm.csproj
+END
+FormStyleEditorControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormStyleEditorControl.cs
+END
+FormWithNonClientArea.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormWithNonClientArea.cs
+END
+FormStyle.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormStyle.cs
+END
+FormStyleEditorControl.resx
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormStyleEditorControl.resx
+END
+FormStyleEditor.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/FormStyleEditor.Designer.cs
+END
+LonghornForm.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/LonghornForm.cs
+END
+NativeMethods.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/CustomBorderForm/NativeMethods.cs
+END

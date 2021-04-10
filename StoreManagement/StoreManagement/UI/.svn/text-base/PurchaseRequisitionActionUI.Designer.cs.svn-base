@@ -1,0 +1,274 @@
+﻿namespace StoreManagement.UI
+{
+    partial class PurchaseRequisitionActionUI
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PurchaseRequisitionActionUI));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.newRequisitonButton = new System.Windows.Forms.ToolStripButton();
+            this.editRequisitonButton = new System.Windows.Forms.ToolStripButton();
+            this.refreshButton = new System.Windows.Forms.ToolStripButton();
+            this.purReqTabControl = new FlatTabControl.FlatTabControl();
+            this.pendingTabPage = new System.Windows.Forms.TabPage();
+            this.pendingListView = new System.Windows.Forms.ListView();
+            this.completeTabPage = new System.Windows.Forms.TabPage();
+            this.completeListView = new System.Windows.Forms.ListView();
+            this.taskPane1 = new XPExplorerBar.TaskPane();
+            this.expando1 = new XPExplorerBar.Expando();
+            this.expando2 = new XPExplorerBar.Expando();
+            this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.purReqTabControl.SuspendLayout();
+            this.pendingTabPage.SuspendLayout();
+            this.completeTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.taskPane1)).BeginInit();
+            this.taskPane1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.expando1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expando2)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(130)))), ((int)(((byte)(176)))));
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.toolStrip1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(679, 34);
+            this.panel1.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(130)))), ((int)(((byte)(176)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(362, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(317, 34);
+            this.panel2.TabIndex = 4;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(130)))), ((int)(((byte)(176)))));
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newRequisitonButton,
+            this.editRequisitonButton,
+            this.refreshButton});
+            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.toolStrip1.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
+            this.toolStrip1.Size = new System.Drawing.Size(281, 35);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // newRequisitonButton
+            // 
+            this.newRequisitonButton.AutoSize = false;
+            this.newRequisitonButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.newRequisitonButton.Image = ((System.Drawing.Image)(resources.GetObject("newRequisitonButton.Image")));
+            this.newRequisitonButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newRequisitonButton.Name = "newRequisitonButton";
+            this.newRequisitonButton.Size = new System.Drawing.Size(32, 32);
+            this.newRequisitonButton.Text = "toolStripButton4";
+            this.newRequisitonButton.Click += new System.EventHandler(this.newRequisitonButton_Click);
+            // 
+            // editRequisitonButton
+            // 
+            this.editRequisitonButton.AutoSize = false;
+            this.editRequisitonButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editRequisitonButton.Image = global::StoreManagement.Properties.Resources.edit24;
+            this.editRequisitonButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editRequisitonButton.Name = "editRequisitonButton";
+            this.editRequisitonButton.Size = new System.Drawing.Size(32, 32);
+            this.editRequisitonButton.Text = "toolStripButton3";
+            this.editRequisitonButton.Click += new System.EventHandler(this.editRequisitonButton_Click);
+            // 
+            // refreshButton
+            // 
+            this.refreshButton.AutoSize = false;
+            this.refreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.refreshButton.Image = global::StoreManagement.Properties.Resources.refresh24;
+            this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(32, 32);
+            this.refreshButton.Text = "toolStripButton1";
+            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            // 
+            // purReqTabControl
+            // 
+            this.purReqTabControl.Controls.Add(this.pendingTabPage);
+            this.purReqTabControl.Controls.Add(this.completeTabPage);
+            this.purReqTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.purReqTabControl.Location = new System.Drawing.Point(0, 34);
+            this.purReqTabControl.myBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(105)))), ((int)(((byte)(141)))));
+            this.purReqTabControl.Name = "purReqTabControl";
+            this.purReqTabControl.SelectedIndex = 0;
+            this.purReqTabControl.Size = new System.Drawing.Size(521, 365);
+            this.purReqTabControl.TabIndex = 6;
+            this.purReqTabControl.SelectedIndexChanged += new System.EventHandler(this.purReqTabControl_SelectedIndexChanged);
+            // 
+            // pendingTabPage
+            // 
+            this.pendingTabPage.Controls.Add(this.pendingListView);
+            this.pendingTabPage.Location = new System.Drawing.Point(4, 25);
+            this.pendingTabPage.Name = "pendingTabPage";
+            this.pendingTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.pendingTabPage.Size = new System.Drawing.Size(513, 336);
+            this.pendingTabPage.TabIndex = 0;
+            this.pendingTabPage.Text = "Pending";
+            this.pendingTabPage.UseVisualStyleBackColor = true;
+            // 
+            // pendingListView
+            // 
+            this.pendingListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.pendingListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pendingListView.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pendingListView.FullRowSelect = true;
+            this.pendingListView.GridLines = true;
+            this.pendingListView.Location = new System.Drawing.Point(3, 3);
+            this.pendingListView.Name = "pendingListView";
+            this.pendingListView.Size = new System.Drawing.Size(507, 330);
+            this.pendingListView.TabIndex = 0;
+            this.pendingListView.UseCompatibleStateImageBehavior = false;
+            this.pendingListView.View = System.Windows.Forms.View.Details;
+            // 
+            // completeTabPage
+            // 
+            this.completeTabPage.Controls.Add(this.completeListView);
+            this.completeTabPage.Location = new System.Drawing.Point(4, 25);
+            this.completeTabPage.Name = "completeTabPage";
+            this.completeTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.completeTabPage.Size = new System.Drawing.Size(513, 336);
+            this.completeTabPage.TabIndex = 1;
+            this.completeTabPage.Text = "Complete";
+            this.completeTabPage.UseVisualStyleBackColor = true;
+            // 
+            // completeListView
+            // 
+            this.completeListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.completeListView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.completeListView.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.completeListView.FullRowSelect = true;
+            this.completeListView.GridLines = true;
+            this.completeListView.Location = new System.Drawing.Point(3, 3);
+            this.completeListView.Name = "completeListView";
+            this.completeListView.Size = new System.Drawing.Size(507, 330);
+            this.completeListView.TabIndex = 1;
+            this.completeListView.UseCompatibleStateImageBehavior = false;
+            this.completeListView.View = System.Windows.Forms.View.Details;
+            // 
+            // taskPane1
+            // 
+            this.taskPane1.AutoScrollMargin = new System.Drawing.Size(12, 12);
+            this.taskPane1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.taskPane1.Expandos.AddRange(new XPExplorerBar.Expando[] {
+            this.expando1,
+            this.expando2});
+            this.taskPane1.Location = new System.Drawing.Point(521, 34);
+            this.taskPane1.Name = "taskPane1";
+            this.taskPane1.Size = new System.Drawing.Size(158, 365);
+            this.taskPane1.TabIndex = 5;
+            this.taskPane1.Text = "taskPane1";
+            // 
+            // expando1
+            // 
+            this.expando1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando1.Animate = true;
+            this.expando1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando1.Location = new System.Drawing.Point(12, 12);
+            this.expando1.Name = "expando1";
+            this.expando1.Size = new System.Drawing.Size(134, 100);
+            this.expando1.TabIndex = 0;
+            this.expando1.Text = "Search";
+            this.expando1.TitleImage = global::StoreManagement.Properties.Resources.search;
+            // 
+            // expando2
+            // 
+            this.expando2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.expando2.Animate = true;
+            this.expando2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expando2.Location = new System.Drawing.Point(12, 124);
+            this.expando2.Name = "expando2";
+            this.expando2.Size = new System.Drawing.Size(134, 100);
+            this.expando2.TabIndex = 1;
+            this.expando2.Text = "Reports";
+            this.expando2.TitleImage = global::StoreManagement.Properties.Resources.report24;
+            // 
+            // PurchaseRequisitionListUI
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(679, 399);
+            this.Controls.Add(this.purReqTabControl);
+            this.Controls.Add(this.taskPane1);
+            this.Controls.Add(this.panel1);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(687, 433);
+            this.Name = "PurchaseRequisitionListUI";
+            this.Text = "Purchase Requisitions";
+            this.Load += new System.EventHandler(this.PurchaseRequisitionListUI_Load);
+            this.panel1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.purReqTabControl.ResumeLayout(false);
+            this.pendingTabPage.ResumeLayout(false);
+            this.completeTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.taskPane1)).EndInit();
+            this.taskPane1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.expando1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.expando2)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton editRequisitonButton;
+        private System.Windows.Forms.ToolStripButton newRequisitonButton;
+        private XPExplorerBar.TaskPane taskPane1;
+        private FlatTabControl.FlatTabControl purReqTabControl;
+        private System.Windows.Forms.TabPage pendingTabPage;
+        private System.Windows.Forms.TabPage completeTabPage;
+        private System.Windows.Forms.ListView pendingListView;
+        private System.Windows.Forms.ListView completeListView;
+        private XPExplorerBar.Expando expando1;
+        private XPExplorerBar.Expando expando2;
+        private System.Windows.Forms.ToolStripButton refreshButton;
+    }
+}

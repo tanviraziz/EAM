@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace StoreManagement.DAL.DAO
+{
+    class Product
+    {
+        //Field
+        private string condition = "1";
+
+        //Property
+        public string PID { get; set; }
+        public Int16 StationaryID { get; set; }
+        public string PCode { get; set; }
+        public string ReqPID { get; set; }
+        public string Pname { get; set; }
+        public decimal StockQty { get; set; }
+        public decimal ReqQty { get; set; }
+        public decimal IssueQty { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal QtyBoforeInspec { get; set; }
+        public decimal QtyAfterInspec { get; set; }
+        public decimal UnitPrice { get; set; }
+        public string Remarks { get; set; }
+        public byte InspecRemarks { get; set; }
+
+        public string Condition
+        {
+            get { return condition; }
+            set { condition = value; }
+        }
+    }
+}

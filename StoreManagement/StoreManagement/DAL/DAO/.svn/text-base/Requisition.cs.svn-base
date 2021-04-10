@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace StoreManagement.DAL.DAO
+{
+    class Requisition
+    {
+        public Requisition()
+        {
+            Products = new List<Product>();
+        }
+        //Fields
+        private string condition = "1";
+
+        //Start: Property
+        public Int16 UnitID { get; set; }
+        #region Store Requisition
+            public Int64 SrrId { get; set; }
+            public string SrrNo { get; set; }
+            public Int32 DeptId { get; set; }
+            public Int64 CostHOfDeptID { get; set; }
+        #endregion
+
+        #region Purchase Requisition
+            public Int64 PrrId { get; set; }
+            public string PrrNo { get; set; }
+            public string PRYear { get; set; }
+            public string TimePeriod { get; set; }
+            public Int16 SCategory { get; set; }
+        #endregion 
+       
+        #region Purchase Order
+            public Int64 PurOrdID { get; set; }
+            public string PurOrdNo { get; set; }
+            public string CepNO { get; set; }
+            public Int32 SupplierID { get; set; }
+            public DateTime PurOrdDate { get; set; }
+        #endregion
+        
+        public decimal TotalItem { get; set; }
+        public List<Product> Products { get; set; }
+        public string Condition
+        {
+            get { return condition; }
+            set { condition = value; }
+        }
+        //End: Property
+    }
+}

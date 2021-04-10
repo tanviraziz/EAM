@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY
+END
+GRRGateway.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/GRRGateway.cs
+END
+PurchaseGateway.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/PurchaseGateway.cs
+END
+MasterSetupGateway.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/MasterSetupGateway.cs
+END
+StoreGateway.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/StoreGateway.cs
+END
+DBConnection.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/DBConnection.cs
+END
+SRRGateway.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/762/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/SRRGateway.cs
+END
+LogInGateway.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/DAL/GATEWAY/LogInGateway.cs
+END

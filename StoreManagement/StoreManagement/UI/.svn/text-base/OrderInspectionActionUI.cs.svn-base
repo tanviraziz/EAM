@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using StoreManagement.BLL;
+using StoreManagement.DAL.DAO;
+using StoreManagement.UTILITY;
+
+namespace StoreManagement.UI
+{
+    public partial class OrderInspectionActionUI : Form
+    {
+        #region Veriables
+            private DynamicControlFill fillControll = null;
+            private PurchaseManager purchaseManager = null;
+            private GRRManager orderManager = null;
+        #endregion
+
+        public OrderInspectionActionUI()
+        {
+            InitializeComponent();
+            SetObjects();
+        }
+
+        private void SetObjects()
+        {
+            fillControll = new DynamicControlFill();
+            purchaseManager = new PurchaseManager();
+            orderManager = new GRRManager();
+        }
+
+        private void OrderInspectionListUI_Load(object sender, EventArgs e)
+        {
+            taskPane1.UseCustomTheme(fillControll.GetAppPath() + @"\CustomeStyle\shellstyle.dll");
+            ShowList();
+        }
+
+        private void ShowList()
+        {
+            switch (inspectionTabControl.SelectedIndex)
+            {
+                case 0:
+                    fillControll.fillListView(pendingListView, orderManager.GetOrderInspeectionList("1", null), "Order No.,Date,Supplier,Total Item,Toatal Received", "100,100,250,100,100");
+                    break;
+                case 1:
+                    fillControll.fillListView(completeListView, orderManager.GetOrderInspeectionList("2", null), "Order No.,Date,Supplier,Total Item,Toatal Received", "100,100,250,100,100");
+                    break;
+            }
+        }
+
+        private void inspectionTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowList();
+        }
+    }
+}

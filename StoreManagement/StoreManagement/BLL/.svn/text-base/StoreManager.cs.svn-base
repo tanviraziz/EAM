@@ -1,0 +1,41 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using StoreManagement.DAL.DAO;
+using StoreManagement.DAL.GATEWAY;
+
+namespace StoreManagement.BLL
+{
+    class StoreManager
+    {
+        #region Veriabls
+            private StoreGateway storeGateway = null;
+        #endregion
+
+        public StoreManager()
+        {
+            storeGateway = new StoreGateway();
+        }
+
+
+        //return the current stock list in a datatable
+        public DataTable GetCurrentStock(string choice, string condition)
+        {
+            try
+            {
+                DataTable dt = storeGateway.StockLIst(choice, condition);
+                if (dt != null)
+                {
+                    return dt;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return null;
+        }
+    }
+}

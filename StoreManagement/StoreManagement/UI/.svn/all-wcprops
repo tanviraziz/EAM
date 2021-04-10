@@ -1,0 +1,653 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI
+END
+EmployeeEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/EmployeeEntryUI.resx
+END
+ItemEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemEntryUI.cs
+END
+ManagemetnDashBoardActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManagemetnDashBoardActionUI.Designer.cs
+END
+StationerySettingsUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StationerySettingsUI.Designer.cs
+END
+ManagemetnDashBoardActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManagemetnDashBoardActionUI.cs
+END
+StationerySettingsUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StationerySettingsUI.cs
+END
+SRRsListUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SRRsListUI.Designer.cs
+END
+MDIParent.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MDIParent.Designer.cs
+END
+MAPICsListUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MAPICsListUI.resx
+END
+DepartmentEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DepartmentEntryUI.Designer.cs
+END
+SupplierSettingsUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SupplierSettingsUI.cs
+END
+GRRInspectionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GRRInspectionUI.Designer.cs
+END
+GRRInspectionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GRRInspectionUI.cs
+END
+PurchaseRequisitionEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseRequisitionEntryUI.Designer.cs
+END
+PurchaseOrderEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseOrderEntryUI.cs
+END
+MapicsCodeEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MapicsCodeEntryUI.Designer.cs
+END
+GRREntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GRREntryUI.resx
+END
+GrrReceiveActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GrrReceiveActionUI.cs
+END
+ManufactEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManufactEntryUI.resx
+END
+CategoryEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/CategoryEntryUI.Designer.cs
+END
+SRRsListUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SRRsListUI.resx
+END
+MDIParent.resx
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MDIParent.resx
+END
+EmployeeEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/EmployeeEntryUI.cs
+END
+DepartmentEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DepartmentEntryUI.resx
+END
+StoreDashboardActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StoreDashboardActionUI.Designer.cs
+END
+DeptOfUnitEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DeptOfUnitEntryUI.Designer.cs
+END
+StoreDashboardActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StoreDashboardActionUI.cs
+END
+StoreRequisitionActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StoreRequisitionActionUI.resx
+END
+SRREntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SRREntryUI.resx
+END
+ItemSubCategoryEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemSubCategoryEntryUI.resx
+END
+OrderInspectionActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/OrderInspectionActionUI.Designer.cs
+END
+MapicsCodeEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MapicsCodeEntryUI.resx
+END
+MAPICsListUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MAPICsListUI.Designer.cs
+END
+UserManagementSettingsUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/UserManagementSettingsUI.resx
+END
+GRREntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GRREntryUI.Designer.cs
+END
+ManufacturerSettingsUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManufacturerSettingsUI.Designer.cs
+END
+RequisitoinApprovalActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/RequisitoinApprovalActionUI.Designer.cs
+END
+RequisitoinApprovalActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/RequisitoinApprovalActionUI.cs
+END
+ManufactEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManufactEntryUI.Designer.cs
+END
+PurchaseOrderActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseOrderActionUI.resx
+END
+OrderInspectionActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/OrderInspectionActionUI.resx
+END
+SupplierEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SupplierEntryUI.Designer.cs
+END
+SRRsListUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SRRsListUI.cs
+END
+MDIParent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MDIParent.cs
+END
+DepartmentEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DepartmentEntryUI.cs
+END
+SRREntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SRREntryUI.Designer.cs
+END
+ItemSubCategoryEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemSubCategoryEntryUI.Designer.cs
+END
+MapicsCodeEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MapicsCodeEntryUI.cs
+END
+ManufacturerSettingsUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManufacturerSettingsUI.resx
+END
+GrrReceiveActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GrrReceiveActionUI.Designer.cs
+END
+DeptWiseBudgetUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DeptWiseBudgetUI.resx
+END
+UserManagementSettingsUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/UserManagementSettingsUI.Designer.cs
+END
+ItemEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemEntryUI.resx
+END
+ManagemetnDashBoardActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManagemetnDashBoardActionUI.resx
+END
+StationerySettingsUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StationerySettingsUI.resx
+END
+UnitEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/UnitEntryUI.Designer.cs
+END
+SupplierSettingsUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SupplierSettingsUI.resx
+END
+SupplierEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SupplierEntryUI.resx
+END
+GRRInspectionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GRRInspectionUI.resx
+END
+CompanySettingsUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/CompanySettingsUI.resx
+END
+PurchaseOrderActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseOrderActionUI.Designer.cs
+END
+PurchaseOrderEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseOrderEntryUI.resx
+END
+PurchaseRequisitionActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseRequisitionActionUI.cs
+END
+OrderInspectionActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/OrderInspectionActionUI.cs
+END
+UnitEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/UnitEntryUI.resx
+END
+ItemCategoryEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemCategoryEntryUI.Designer.cs
+END
+ManufacturerSettingsUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManufacturerSettingsUI.cs
+END
+PendingRequisitionActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PendingRequisitionActionUI.Designer.cs
+END
+ItemCategoryEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemCategoryEntryUI.cs
+END
+PendingRequisitionActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PendingRequisitionActionUI.cs
+END
+StoreDashboardActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StoreDashboardActionUI.resx
+END
+ItemEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemEntryUI.Designer.cs
+END
+DeptWiseBudgetUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DeptWiseBudgetUI.cs
+END
+SupplierSettingsUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SupplierSettingsUI.Designer.cs
+END
+SupplierEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SupplierEntryUI.cs
+END
+PurchaseOrderEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseOrderEntryUI.Designer.cs
+END
+CompanySettingsUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/CompanySettingsUI.cs
+END
+PurchaseRequisitionEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseRequisitionEntryUI.cs
+END
+RequisitoinApprovalActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/RequisitoinApprovalActionUI.resx
+END
+UnitEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/DotNet/!svn/ver/736/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/UnitEntryUI.cs
+END
+TestForm.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/TestForm.Designer.cs
+END
+MapicsCodeOfDeptUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MapicsCodeOfDeptUI.Designer.cs
+END
+MAPICsListUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MAPICsListUI.cs
+END
+CategoryEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/CategoryEntryUI.resx
+END
+GRREntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GRREntryUI.cs
+END
+DeptWiseBudgetUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DeptWiseBudgetUI.Designer.cs
+END
+DeptOfUnitEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DeptOfUnitEntryUI.resx
+END
+ManufactEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ManufactEntryUI.cs
+END
+PurchaseRequisitionActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseRequisitionActionUI.resx
+END
+TestForm.resx
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/TestForm.resx
+END
+MapicsCodeOfDeptUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MapicsCodeOfDeptUI.resx
+END
+StoreRequisitionActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StoreRequisitionActionUI.Designer.cs
+END
+CompanySettingsUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/CompanySettingsUI.Designer.cs
+END
+StoreRequisitionActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/StoreRequisitionActionUI.cs
+END
+SRREntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/SRREntryUI.cs
+END
+ItemSubCategoryEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemSubCategoryEntryUI.cs
+END
+ItemCategoryEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/ItemCategoryEntryUI.resx
+END
+PendingRequisitionActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PendingRequisitionActionUI.resx
+END
+UserManagementSettingsUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/UserManagementSettingsUI.cs
+END
+CategoryEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/CategoryEntryUI.cs
+END
+EmployeeEntryUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/EmployeeEntryUI.Designer.cs
+END
+DeptOfUnitEntryUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/DeptOfUnitEntryUI.cs
+END
+PurchaseRequisitionActionUI.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseRequisitionActionUI.Designer.cs
+END
+PurchaseOrderActionUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseOrderActionUI.cs
+END
+PurchaseRequisitionEntryUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/PurchaseRequisitionEntryUI.resx
+END
+TestForm.cs
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/TestForm.cs
+END
+GrrReceiveActionUI.resx
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/DotNet/!svn/ver/759/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/GrrReceiveActionUI.resx
+END
+MapicsCodeOfDeptUI.cs
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/DotNet/!svn/ver/669/trunk/Store%20Management/trunk/Code/StoreManagement/StoreManagement/UI/MapicsCodeOfDeptUI.cs
+END
